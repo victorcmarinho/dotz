@@ -49,12 +49,12 @@ describe('ProductsComponent', () => {
       image: '',
       name: 'prodoctMock',
       price: '1000',
-      update_at: ''
-    }
-  ]
+      update_at: '',
+    },
+  ];
 
   beforeEach(async () => {
-    localStorage.setItem(ELOCAL_STORAGE.products, JSON.stringify(mockProducts))
+    localStorage.setItem(ELOCAL_STORAGE.products, JSON.stringify(mockProducts));
     componentEl = await render(ProductsComponent, renderOptions);
     fixture = componentEl.fixture;
     component = fixture.componentInstance;
@@ -66,7 +66,7 @@ describe('ProductsComponent', () => {
   });
 
   it('should be able render without products', () => {
-    localStorage.clear()
+    localStorage.clear();
     expect(component).toBeTruthy();
   });
 });

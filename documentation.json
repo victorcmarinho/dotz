@@ -1,1697 +1,1655 @@
 {
-    "pipes": [],
-    "interfaces": [
+  "pipes": [],
+  "interfaces": [
+    {
+      "name": "ProductsDTO",
+      "id": "interface-ProductsDTO-3f1a84adf766fc76eb9376cbf4be152a",
+      "file": "src/app/core/models/products.ts",
+      "type": "interface",
+      "sourceCode": "export interface ProductsDTO {\r\n    id:        string;\r\n    name:      string;\r\n    price:     string;\r\n    image:     string;\r\n    create_at: string;\r\n    update_at: string;\r\n}\r\n",
+      "properties": [
         {
-            "name": "ProductsDTO",
-            "id": "interface-ProductsDTO-3f1a84adf766fc76eb9376cbf4be152a",
-            "file": "src/app/core/models/products.ts",
-            "type": "interface",
-            "sourceCode": "export interface ProductsDTO {\r\n    id:        string;\r\n    name:      string;\r\n    price:     string;\r\n    image:     string;\r\n    create_at: string;\r\n    update_at: string;\r\n}\r\n",
-            "properties": [
-                {
-                    "name": "create_at",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 6
-                },
-                {
-                    "name": "id",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 2
-                },
-                {
-                    "name": "image",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 5
-                },
-                {
-                    "name": "name",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 3
-                },
-                {
-                    "name": "price",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 4
-                },
-                {
-                    "name": "update_at",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 7
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 150,
-            "methods": []
+          "name": "create_at",
+          "type": "string",
+          "optional": false,
+          "description": "",
+          "line": 6
         },
         {
-            "name": "UserDTO",
-            "id": "interface-UserDTO-6ae813070fefdc30f3ba9089452c0c87",
-            "file": "src/app/core/models/user.ts",
-            "type": "interface",
-            "sourceCode": "export interface UserDTO {\r\n    id?:       string;\r\n    avatar?:   string;\r\n    email:    string;\r\n    password: number;\r\n    city?:     string;\r\n    state?:    string;\r\n    address?:  string;\r\n    zipcode?:  string;\r\n}\r\n",
-            "properties": [
-                {
-                    "name": "address",
-                    "type": "string",
-                    "optional": true,
-                    "description": "",
-                    "line": 9
-                },
-                {
-                    "name": "avatar",
-                    "type": "string",
-                    "optional": true,
-                    "description": "",
-                    "line": 4
-                },
-                {
-                    "name": "city",
-                    "type": "string",
-                    "optional": true,
-                    "description": "",
-                    "line": 7
-                },
-                {
-                    "name": "email",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 5
-                },
-                {
-                    "name": "id",
-                    "type": "string",
-                    "optional": true,
-                    "description": "",
-                    "line": 3
-                },
-                {
-                    "name": "password",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 6
-                },
-                {
-                    "name": "state",
-                    "type": "string",
-                    "optional": true,
-                    "description": "",
-                    "line": 8
-                },
-                {
-                    "name": "zipcode",
-                    "type": "string",
-                    "optional": true,
-                    "description": "",
-                    "line": 10
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 150,
-            "methods": []
+          "name": "id",
+          "type": "string",
+          "optional": false,
+          "description": "",
+          "line": 2
+        },
+        {
+          "name": "image",
+          "type": "string",
+          "optional": false,
+          "description": "",
+          "line": 5
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": false,
+          "description": "",
+          "line": 3
+        },
+        {
+          "name": "price",
+          "type": "string",
+          "optional": false,
+          "description": "",
+          "line": 4
+        },
+        {
+          "name": "update_at",
+          "type": "string",
+          "optional": false,
+          "description": "",
+          "line": 7
         }
-    ],
-    "injectables": [
-        {
-            "name": "ApiService",
-            "id": "injectable-ApiService-e30b448be9e30cc779164c7625298611",
-            "file": "src/app/core/services/api.service.ts",
-            "properties": [
-                {
-                    "name": "basePath",
-                    "defaultValue": "environment.api",
-                    "type": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 13,
-                    "modifierKind": [
-                        112
-                    ]
-                }
-            ],
-            "methods": [
-                {
-                    "name": "getProducts",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "Observable<ProductsDTO[]>",
-                    "typeParameters": [],
-                    "line": 21
-                },
-                {
-                    "name": "postUser",
-                    "args": [
-                        {
-                            "name": "data",
-                            "type": "UserDTO"
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "Observable<UserDTO>",
-                    "typeParameters": [],
-                    "line": 17,
-                    "jsdoctags": [
-                        {
-                            "name": "data",
-                            "type": "UserDTO",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "description": "",
-            "sourceCode": "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { environment } from 'src/environments/environment';\nimport { ProductsDTO } from '../models/products';\nimport { UserDTO } from '../models/user';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class ApiService {\n\n  private basePath = environment.api\n\n  constructor( private http: HttpClient) { }\n\n  postUser(data: UserDTO): Observable<UserDTO> {\n    return this.http.post<UserDTO>(`${this.basePath}/user`, data)\n  }\n\n  getProducts():Observable<ProductsDTO[]> {\n    return this.http.get<ProductsDTO[]>(`${this.basePath}/products`)\n  }\n}\n",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [
-                    {
-                        "name": "http",
-                        "type": "HttpClient"
-                    }
-                ],
-                "line": 13,
-                "jsdoctags": [
-                    {
-                        "name": "http",
-                        "type": "HttpClient",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    }
-                ]
-            },
-            "type": "injectable"
-        }
-    ],
-    "classes": [
-        {
-            "name": "AppPage",
-            "id": "class-AppPage-ee2067dfb1c303f41003aea7d82d51e0",
-            "file": "e2e/src/app.po.ts",
-            "type": "class",
-            "sourceCode": "import { browser, by, element } from 'protractor';\n\nexport class AppPage {\n  async navigateTo(): Promise<unknown> {\n    return browser.get(browser.baseUrl);\n  }\n\n  async getTitleText(): Promise<string> {\n    return element(by.css('app-root .content span')).getText();\n  }\n}\n",
-            "properties": [],
-            "methods": [
-                {
-                    "name": "getTitleText",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "Promise<string>",
-                    "typeParameters": [],
-                    "line": 8,
-                    "modifierKind": [
-                        120
-                    ]
-                },
-                {
-                    "name": "navigateTo",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "Promise<unknown>",
-                    "typeParameters": [],
-                    "line": 4,
-                    "modifierKind": [
-                        120
-                    ]
-                }
-            ],
-            "indexSignatures": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "hostBindings": [],
-            "hostListeners": []
-        }
-    ],
-    "directives": [],
-    "components": [
-        {
-            "name": "AppComponent",
-            "id": "component-AppComponent-3ee1a8cb982539c7eebf1b5ed5fa047f",
-            "file": "src/app/app.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-root",
-            "styleUrls": [
-                "./app.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./app.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "title",
-                    "defaultValue": "'dotz'",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                }
-            ],
-            "methodsClass": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'dotz';\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./app.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "templateData": "<main>\r\n    <router-outlet></router-outlet>\r\n</main>"
-        },
-        {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-b04be7073757fb03da9c74f1536c1fa5",
-            "file": "src/app/shared/button/button.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-button",
-            "styleUrls": [],
-            "styles": [],
-            "templateUrl": [
-                "./button.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "buttonType",
-                    "defaultValue": "''",
-                    "line": 10
-                },
-                {
-                    "name": "type",
-                    "defaultValue": "'primary'",
-                    "line": 9,
-                    "type": "\"primary\" | \"secondary\" | \"flat\""
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 14
-                }
-            ],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n})\nexport class ButtonComponent implements OnInit {\n\n  @Input() type: 'primary' | 'secondary' | 'flat' = 'primary'\n  @Input() buttonType = '';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [],
-                "line": 10
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<button\n  class=\"btn\"\n  [class.btn--secondary]=\"type === 'secondary'\"\n  [class.btn--flat]=\"type === 'flat'\"\n  [type]=\"buttonType\"\n>\n  <ng-content></ng-content>\n</button>\n"
-        },
-        {
-            "name": "CardComponent",
-            "id": "component-CardComponent-b6e2678f38d773a567a7d9aba98190dd",
-            "file": "src/app/shared/card/card.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-card",
-            "styleUrls": [
-                "./card.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./card.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "image",
-                    "defaultValue": "'https://images.unsplash.com/photo-1565849904461-04a58ad377e0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2VsbCUyMHBob25lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'",
-                    "line": 10,
-                    "type": "string"
-                },
-                {
-                    "name": "isSelect",
-                    "defaultValue": "false",
-                    "line": 13,
-                    "type": "boolean"
-                },
-                {
-                    "name": "name",
-                    "defaultValue": "'Phone'",
-                    "line": 11,
-                    "type": "string"
-                },
-                {
-                    "name": "price",
-                    "defaultValue": "'1000'",
-                    "line": 12,
-                    "type": "string"
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 16
-                }
-            ],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-card',\n  templateUrl: './card.component.html',\n  styleUrls: ['./card.component.scss']\n})\nexport class CardComponent implements OnInit {\n\n  @Input() image: string = 'https://images.unsplash.com/photo-1565849904461-04a58ad377e0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2VsbCUyMHBob25lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'\n  @Input() name: string = 'Phone'\n  @Input() price: string = '1000'\n  @Input() isSelect: boolean = false\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "@import \"../../../styles/_variables\";\r\n.card {\r\n  display: flex;\r\n  justify-content: space-between;\r\n\r\n  max-width: 360px;\r\n  width: 100%;\r\n  height: 165px;\r\n  border-radius: 15px;\r\n\r\n  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.168734));\r\n\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  background-position: center;\r\n\r\n  cursor: pointer;\r\n\r\n  transition: .5s;\r\n\r\n  h1 {\r\n    font-size: $titleSmall;\r\n    color: white;\r\n    padding: 6px 10px 6px 10px;\r\n  }\r\n\r\n  p {\r\n    width: 100px;\r\n    height: 55px;\r\n    background: rgba(255, 255, 255, 0.902633);\r\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.348967);\r\n    border-radius: 15px;\r\n    align-self: flex-end;\r\n    margin: 8px;\r\n    color: $orange;\r\n    font-size: $titleSmall;\r\n\r\n    display: flex;\r\n    place-content: center;\r\n    place-items: center;\r\n    line-height: 35px;\r\n  }\r\n\r\n  &--opacity {\r\n    opacity: 0.5;\r\n  }\r\n}\r\n",
-                    "styleUrl": "./card.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [],
-                "line": 13
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<section\n  class=\"card\"\n  [class.card--opacity]=\"isSelect\"\n  [ngStyle]=\"{\n    'background-image': 'url(' + image + ')'\n  }\"\n  data-testid=\"card\"\n>\n  <h1>{{ name }}</h1>\n  <p>{{ price }} pts</p>\n</section>\n"
-        },
-        {
-            "name": "HomeComponent",
-            "id": "component-HomeComponent-bcf5f599077e849476016c5785b47f9d",
-            "file": "src/app/pages/home/home.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-home",
-            "styleUrls": [
-                "./home.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./home.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "options",
-                    "defaultValue": "{\n    path: '../../../assets/loading.json',\n  }",
-                    "type": "AnimationOptions",
-                    "optional": false,
-                    "description": "",
-                    "line": 16
-                },
-                {
-                    "name": "products$",
-                    "type": "Observable<ProductsDTO[]>",
-                    "optional": false,
-                    "description": "",
-                    "line": 20
-                },
-                {
-                    "name": "pts",
-                    "defaultValue": "1000",
-                    "type": "number",
-                    "optional": false,
-                    "description": "",
-                    "line": 22
-                },
-                {
-                    "name": "selectedProducts",
-                    "defaultValue": "[]",
-                    "type": "ProductsDTO[]",
-                    "optional": false,
-                    "description": "",
-                    "line": 24
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "isSelected",
-                    "args": [
-                        {
-                            "name": "product",
-                            "type": "ProductsDTO"
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "boolean",
-                    "typeParameters": [],
-                    "line": 32,
-                    "jsdoctags": [
-                        {
-                            "name": "product",
-                            "type": "ProductsDTO",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 28
-                },
-                {
-                    "name": "onClick",
-                    "args": [
-                        {
-                            "name": "product",
-                            "type": "ProductsDTO"
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 37,
-                    "jsdoctags": [
-                        {
-                            "name": "product",
-                            "type": "ProductsDTO",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                }
-            ],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { AnimationOptions } from 'ngx-lottie';\nimport { Observable } from 'rxjs';\nimport { ProductsDTO } from 'src/app/core/models/products';\nimport { ApiService } from 'src/app/core/services/api.service';\nimport { ELOCAL_STORAGE } from 'src/app/utils/constants/ElocalStorage';\n\n\n@Component({\n  selector: 'app-home',\n  templateUrl: './home.component.html',\n  styleUrls: ['./home.component.scss'],\n})\nexport class HomeComponent implements OnInit {\n\n  options: AnimationOptions = {\n    path: '../../../assets/loading.json',\n  };\n\n  products$!: Observable<ProductsDTO[]>;\n\n  pts = 1000\n\n  selectedProducts: ProductsDTO[] = [];\n\n  constructor(private apiService: ApiService) {}\n\n  ngOnInit(): void {\n    this.products$ = this.apiService.getProducts();\n  }\n\n  isSelected(product: ProductsDTO): boolean {\n    const hasIndex = this.selectedProducts.indexOf(product);\n    return hasIndex > -1;\n  }\n\n  onClick(product: ProductsDTO) {\n    const hasIndex = this.selectedProducts.indexOf(product);\n\n    if (hasIndex > -1) {\n      this.selectedProducts = this.selectedProducts.filter(\n        (target) => target != product\n      );\n      this.pts += +product.price\n    }\n    else {\n      let pts = this.pts\n      pts -= +product.price\n      if(pts >= 0) {\n        this.selectedProducts.push(product);\n        this.pts = pts\n      }\n    }\n\n    localStorage.setItem(ELOCAL_STORAGE.products, JSON.stringify(this.selectedProducts))\n  }\n\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "@import '../../../styles/_variables';\r\n.home {\r\n\r\n    max-width: 1080px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    margin-top: 20px;\r\n    >div {\r\n        width: 100%;\r\n    }\r\n\r\n    &__header {\r\n        padding: 8px;\r\n        display: flex;\r\n        place-content: space-between;\r\n\r\n        width: 100%;\r\n\r\n        font-size: $titleSmall;\r\n        h1 {\r\n            color: $orange;\r\n        }\r\n\r\n        h3 {\r\n            color: $grayText;\r\n        }\r\n    }\r\n\r\n    &__nav {\r\n        font-size: $textLarge;\r\n        color: $grayText;\r\n\r\n        ul {\r\n            margin-top: 8px;\r\n            display: flex;\r\n            flex-direction: row;\r\n            place-content: center;\r\n\r\n            li + li {\r\n                margin-left: 18px;\r\n            }\r\n\r\n            li {\r\n                display: flex;\r\n                white-space: nowrap;\r\n                line-height: 21px;\r\n                width: min-content;\r\n                cursor: pointer;\r\n\r\n                &.active {\r\n                    color: $orange;\r\n                    border-bottom: 2px solid;\r\n                }\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n    &__products {\r\n        margin-top: 24px;\r\n        display: grid;\r\n        grid-template-columns: repeat(auto-fill, minmax(300px, 356px));\r\n        gap: 5px;\r\n        place-content: center;\r\n    }\r\n}",
-                    "styleUrl": "./home.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [
-                    {
-                        "name": "apiService",
-                        "type": "ApiService"
-                    }
-                ],
-                "line": 24,
-                "jsdoctags": [
-                    {
-                        "name": "apiService",
-                        "type": "ApiService",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    }
-                ]
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<section class=\"home\">\n  <div>\n    <header class=\"home__header\">\n      <h1>Dotz</h1>\n      <h3>Pts {{pts}}</h3>\n    </header>\n\n    <nav class=\"home__nav\">\n      <ul>\n        <li routerLink=\"/home\" routerLinkActive=\"active\">Home</li>\n        <li routerLink=\"/products\" routerLinkActive=\"active\">Meus pedidos</li>\n      </ul>\n    </nav>\n  </div>\n\n  <div class=\"home__products\" *ngIf=\"products$ | async as products; else loading\">\n    \n    <ng-container *ngFor=\"let product of products$ | async\">\n      <app-card [image]='product.image' [name]=\"product.name\" [price]=\"product.price\" [isSelect]=\"isSelected(product)\" (click)=\"onClick(product)\"></app-card>\n    </ng-container>\n  </div>\n  <ng-template #loading>\n    <ng-lottie [options]=\"options\"></ng-lottie>\n  </ng-template>\n</section>\n"
-        },
-        {
-            "name": "InputCompoent",
-            "id": "component-InputCompoent-68d281378986f1ed291096d81e53a7aa",
-            "file": "src/app/shared/input/input.stories.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-button",
-            "styleUrls": [],
-            "styles": [],
-            "template": "",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { Story, Meta } from '@storybook/angular/types-6-0';\r\n\r\n@Component({\r\n    selector: 'app-button',\r\n    template: '',\r\n})\r\nclass InputCompoent { }\r\n\r\nexport default {\r\n    title: 'shared/Input',\r\n} as Meta<InputCompoent>;\r\n\r\n\r\nexport const Default: Story = () => ({\r\n    template: '<input class=\"input\" />',\r\n});\r\n\r\nexport const Password: Story = () => ({\r\n    template: '<input class=\"input\" type=\"password\" />',\r\n  });\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": ""
-        },
-        {
-            "name": "LoginInComponent",
-            "id": "component-LoginInComponent-454cb53d1f7078552c686874d8cde734",
-            "file": "src/app/pages/auth/login-in/login-in.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-login-in",
-            "styleUrls": [
-                "./login-in.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./login-in.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "loginForm",
-                    "defaultValue": "this.fb.group({\r\n    email: [''],\r\n    password: [''],\r\n  })",
-                    "type": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 13
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 24
-                },
-                {
-                    "name": "onSubmit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 26
-                }
-            ],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';\r\nimport { Component, OnInit } from '@angular/core';\r\nimport { FormBuilder } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { ApiService } from 'src/app/core/services/api.service';\r\n\r\n@Component({\r\n  selector: 'app-login-in',\r\n  templateUrl: './login-in.component.html',\r\n  styleUrls: ['./login-in.component.scss'],\r\n})\r\nexport class LoginInComponent implements OnInit {\r\n  loginForm = this.fb.group({\r\n    email: [''],\r\n    password: [''],\r\n  });\r\n\r\n  constructor(\r\n    private fb: FormBuilder,\r\n    private apiService: ApiService,\r\n    private router: Router\r\n  ) { }\r\n\r\n  ngOnInit(): void {}\r\n\r\n  onSubmit() {\r\n    this.apiService\r\n      .postUser(this.loginForm.value)\r\n      .toPromise()\r\n      .then(() => this.router.navigate(['/home']));\r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "@import './../../../../styles/_variables';\r\n.login {\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    height: 100vh;\r\n\r\n    > div {\r\n        max-width: 800px;\r\n        margin: auto;\r\n    }\r\n\r\n    &__presentation {\r\n        color: $orange;\r\n        margin-top: 40px;\r\n        margin-bottom: 30px;\r\n        h1 {\r\n            \r\n            margin-top: calc(auto - 40%);\r\n            font-size: $titleSmall;\r\n        }\r\n    \r\n        p {\r\n            font-size: $title;\r\n            color: $blue;\r\n        }\r\n    }\r\n\r\n    &__form {\r\n        input + input {\r\n            margin-top: 25px;\r\n        }\r\n        \r\n        &__buttons {\r\n            margin-top: 20px;\r\n            display: grid;\r\n            grid-template-columns: 1fr;\r\n            row-gap: 20px;\r\n\r\n            > div {\r\n                display: flex;\r\n                flex-direction: column;\r\n                place-content: center;\r\n            }\r\n\r\n            span {\r\n                font-size: $textMedium;\r\n                color: $grayText;\r\n                margin: auto;\r\n            }\r\n\r\n            app-button {\r\n                width: 100%;\r\n                button {\r\n                    width: 100%;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n}",
-                    "styleUrl": "./login-in.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [
-                    {
-                        "name": "fb",
-                        "type": "FormBuilder"
-                    },
-                    {
-                        "name": "apiService",
-                        "type": "ApiService"
-                    },
-                    {
-                        "name": "router",
-                        "type": "Router"
-                    }
-                ],
-                "line": 16,
-                "jsdoctags": [
-                    {
-                        "name": "fb",
-                        "type": "FormBuilder",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    },
-                    {
-                        "name": "apiService",
-                        "type": "ApiService",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    },
-                    {
-                        "name": "router",
-                        "type": "Router",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    }
-                ]
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<section class=\"login\">\n    <div>\n        <div class=\"login__presentation\">\n            <h1>Dotz</h1>\n            <p>Controle seus pontos de forma muito simples</p>\n        </div>\n    \n      <form class=\"login__form\" [formGroup]=\"loginForm\">\n          <input class=\"input\" type=\"email\" placeholder=\"Email\"  formControlName=\"email\"/>\n          <input class=\"input\" type=\"password\" placeholder=\"Senha\" formControlName=\"password\"/>\n          <div class=\"login__form__buttons\">\n              <app-button buttonType=\"submit\" (click)=\"onSubmit()\"> Entrar </app-button>\n              <div>\n                  <span>Ainda não é cadastrado?</span>\n                  <app-button routerLink=\"/auth/signin\" type=\"flat\" buttonType=\"button\"> Criar uma conta </app-button>\n              </div>\n          </div>\n      </form>\n    </div>\n</section>\n"
-        },
-        {
-            "name": "ProductsComponent",
-            "id": "component-ProductsComponent-930cf4fedd0f4df4430e4d4fc29e0820",
-            "file": "src/app/pages/home/products/products.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-products",
-            "styleUrls": [
-                "./products.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./products.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { ProductsDTO } from 'src/app/core/models/products';\nimport { ELOCAL_STORAGE } from 'src/app/utils/constants/ElocalStorage';\n\n@Component({\n  selector: 'app-products',\n  templateUrl: './products.component.html',\n  styleUrls: ['./products.component.scss'],\n})\nexport class ProductsComponent {\n  get products(): ProductsDTO[] {\n    return JSON.parse(\n      localStorage.getItem(ELOCAL_STORAGE.products)!\n    ) as ProductsDTO[];\n  }\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "@import '../../../../styles/_variables';\r\n.products {\r\n\r\n    max-width: 1080px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    margin-top: 20px;\r\n    >div {\r\n        width: 100%;\r\n    }\r\n\r\n    &__header {\r\n        padding: 8px;\r\n        display: flex;\r\n        place-content: space-between;\r\n\r\n        width: 100%;\r\n\r\n        font-size: $titleSmall;\r\n        h1 {\r\n            color: $orange;\r\n        }\r\n\r\n        h3 {\r\n            color: $grayText;\r\n        }\r\n    }\r\n\r\n    &__nav {\r\n        font-size: $textLarge;\r\n        color: $grayText;\r\n\r\n        ul {\r\n            margin-top: 8px;\r\n            display: flex;\r\n            flex-direction: row;\r\n            place-content: center;\r\n\r\n            li + li {\r\n                margin-left: 18px;\r\n            }\r\n\r\n            li {\r\n                display: flex;\r\n                white-space: nowrap;\r\n                line-height: 21px;\r\n                width: min-content;\r\n                cursor: pointer;\r\n\r\n                &.active {\r\n                    color: $orange;\r\n                    border-bottom: 2px solid;\r\n                }\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n    &__products {\r\n        margin-top: 24px;\r\n        display: grid;\r\n        grid-template-columns: repeat(auto-fill, minmax(300px, 356px));\r\n        gap: 5px;\r\n        place-content: center;\r\n    }\r\n}",
-                    "styleUrl": "./products.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "accessors": {
-                "products": {
-                    "name": "products",
-                    "getSignature": {
-                        "name": "products",
-                        "type": "[]",
-                        "returnType": "ProductsDTO[]",
-                        "line": 11
-                    }
-                }
-            },
-            "templateData": "<section class=\"products\">\n  <div>\n    <header class=\"products__header\">\n      <h1>Dotz</h1>\n    </header>\n\n    <nav class=\"products__nav\">\n      <ul>\n        <li routerLink=\"/home\" routerLinkActive=\"active\">Home</li>\n        <li routerLink=\"/products\" routerLinkActive=\"active\">Meus pedidos</li>\n      </ul>\n    </nav>\n  </div>\n\n  <div class=\"products__products\">\n    <ng-container *ngFor=\"let product of products\">\n      <app-card\n        [image]=\"product.image\"\n        [name]=\"product.name\"\n        [price]=\"product.price\"\n      ></app-card>\n    </ng-container>\n  </div>\n</section>\n"
-        },
-        {
-            "name": "SignInComponent",
-            "id": "component-SignInComponent-09d88646dda12a8b7e2cdfe0cd71946b",
-            "file": "src/app/pages/auth/sign-in/sign-in.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-sign-in",
-            "styleUrls": [
-                "./sign-in.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./sign-in.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "signinForm",
-                    "defaultValue": "this.fb.group({\n    email: [''],\n    password: [''],\n    city: [''],\n    state: [''],\n    address: [''],\n    zipcode: [''],\n  })",
-                    "type": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 13
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 28
-                },
-                {
-                    "name": "onSubmit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 31
-                }
-            ],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { ApiService } from 'src/app/core/services/api.service';\n\n@Component({\n  selector: 'app-sign-in',\n  templateUrl: './sign-in.component.html',\n  styleUrls: ['./sign-in.component.scss']\n})\nexport class SignInComponent implements OnInit {\n\n  signinForm = this.fb.group({\n    email: [''],\n    password: [''],\n    city: [''],\n    state: [''],\n    address: [''],\n    zipcode: [''],\n  });\n\n  constructor(\n    private fb: FormBuilder,\n    private apiService: ApiService,\n    private router: Router\n  ) {}\n\n  ngOnInit(): void {\n  }\n\n  onSubmit() {\n    this.apiService\n      .postUser(this.signinForm.value)\n      .toPromise()\n      .then(() => this.router.navigate(['/auth/login']));\n  }\n\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "@import './../../../../styles/_variables';\r\n.signin {\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    height: 100vh;\r\n\r\n    > div {\r\n        max-width: 800px;\r\n        margin: auto;\r\n    }\r\n\r\n    &__presentation {\r\n        color: $orange;\r\n        margin-top: 40px;\r\n        margin-bottom: 30px;\r\n        h1 {\r\n            \r\n            margin-top: calc(auto - 40%);\r\n            font-size: $titleSmall;\r\n        }\r\n    \r\n        p {\r\n            font-size: $title;\r\n            color: $blue;\r\n        }\r\n    }\r\n\r\n    &__form {\r\n        input + input {\r\n            margin-top: 25px;\r\n        }\r\n        \r\n        &__buttons {\r\n            margin-top: 20px;\r\n            display: grid;\r\n            grid-template-columns: 1fr;\r\n            row-gap: 20px;\r\n\r\n            > div {\r\n                display: flex;\r\n                flex-direction: column;\r\n                place-content: center;\r\n            }\r\n\r\n            span {\r\n                font-size: $textMedium;\r\n                color: $grayText;\r\n                margin: auto;\r\n            }\r\n\r\n            app-button {\r\n                width: 100%;\r\n                button {\r\n                    width: 100%;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n}",
-                    "styleUrl": "./sign-in.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [
-                    {
-                        "name": "fb",
-                        "type": "FormBuilder"
-                    },
-                    {
-                        "name": "apiService",
-                        "type": "ApiService"
-                    },
-                    {
-                        "name": "router",
-                        "type": "Router"
-                    }
-                ],
-                "line": 20,
-                "jsdoctags": [
-                    {
-                        "name": "fb",
-                        "type": "FormBuilder",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    },
-                    {
-                        "name": "apiService",
-                        "type": "ApiService",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    },
-                    {
-                        "name": "router",
-                        "type": "Router",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    }
-                ]
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<section class=\"signin\">\n    <div>\n        <div class=\"signin__presentation\">\n            <h1>Dotz</h1>\n            <p>Controle seus pontos de forma muito simples</p>\n        </div>\n    \n      <form class=\"signin__form\" [formGroup]=\"signinForm\">\n          <input class=\"input\" type=\"email\" placeholder=\"Email\"  formControlName=\"email\"/>\n          <input class=\"input\" type=\"password\" placeholder=\"Senha\" formControlName=\"password\"/>\n          <input class=\"input\" type=\"text\" placeholder=\"Cidade\" formControlName=\"city\"/>\n          <input class=\"input\" type=\"state\" placeholder=\"Estado\" formControlName=\"state\"/>\n          <input class=\"input\" type=\"address\" placeholder=\"Rua\" formControlName=\"address\"/>\n          <input class=\"input\" type=\"zipcode\" placeholder=\"Código Postal\" mask=\"99999-999\" formControlName=\"zipcode\"/>\n          <div class=\"signin__form__buttons\">\n              <app-button buttonType=\"submit\" (click)=\"onSubmit()\"> Cadastrar </app-button>\n              <div>\n                  <span>Ja é cadastrado?</span>\n                  <app-button routerLink=\"/auth/login\" type=\"flat\" buttonType=\"button\"> Fazer login </app-button>\n              </div>\n          </div>\n      </form>\n    </div>\n</section>\n"
-        }
-    ],
-    "modules": [
-        {
-            "name": "AppModule",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "AppComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": [
-                        {
-                            "name": "AppRoutingModule"
-                        },
-                        {
-                            "name": "CoreModule"
-                        }
-                    ]
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": [
-                        {
-                            "name": "AppComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "AppRoutingModule",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": []
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "AuthModule",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "LoginInComponent"
-                        },
-                        {
-                            "name": "SignInComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": [
-                        {
-                            "name": "AuthRoutingModule"
-                        },
-                        {
-                            "name": "SharedModule"
-                        }
-                    ]
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "AuthRoutingModule",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": []
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "CoreModule",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": []
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "HomeModule",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "HomeComponent"
-                        },
-                        {
-                            "name": "ProductsComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": [
-                        {
-                            "name": "HomeRoutingModule"
-                        },
-                        {
-                            "name": "SharedModule"
-                        }
-                    ]
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "HomeRoutingModule",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": []
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "SharedModule",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "ButtonComponent"
-                        },
-                        {
-                            "name": "CardComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": [
-                        {
-                            "name": "ButtonComponent"
-                        },
-                        {
-                            "name": "CardComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        }
-    ],
-    "miscellaneous": {
-        "variables": [
-            {
-                "name": "context",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/test.ts",
-                "type": "",
-                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/button/button.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/card/card.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/input/input.stories.ts",
-                "type": "Story",
-                "defaultValue": "() => ({\r\n    template: '<input class=\"input\" />',\r\n})"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "type": "object",
-                "defaultValue": "{\n  production: false,\n  api: 'https://60a0033e7ee1430017bf1430.mockapi.io'\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
-            },
-            {
-                "name": "Password",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/input/input.stories.ts",
-                "type": "Story",
-                "defaultValue": "() => ({\r\n    template: '<input class=\"input\" type=\"password\" />',\r\n  })"
-            },
-            {
-                "name": "require",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/test.ts",
-                "type": "literal type"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/button/button.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\r\n    component: ButtonComponent,\r\n    props: args,\r\n    template: `<app-button>Button</app-button>`,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/card/card.stories.ts",
-                "type": "Story<CardComponent>",
-                "defaultValue": "(args: CardComponent) => ({\r\n  props: args,\r\n})"
-            }
-        ],
-        "functions": [
-            {
-                "name": "playerFactory",
-                "file": "src/app/app.module.ts",
-                "ctype": "miscellaneous",
-                "subtype": "function",
-                "description": "",
-                "args": []
-            }
-        ],
-        "typealiases": [],
-        "enumerations": [
-            {
-                "name": "ELOCAL_STORAGE",
-                "childs": [
-                    {
-                        "name": "products",
-                        "value": "dotz_products"
-                    }
-                ],
-                "ctype": "miscellaneous",
-                "subtype": "enum",
-                "description": "",
-                "file": "src/app/utils/constants/ElocalStorage.ts"
-            }
-        ],
-        "groupedVariables": {
-            "src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/test.ts",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/test.ts",
-                    "type": "literal type"
-                }
-            ],
-            "src/app/shared/button/button.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/button/button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/button/button.stories.ts",
-                    "type": "Story<ButtonComponent>",
-                    "defaultValue": "(args: ButtonComponent) => ({\r\n    component: ButtonComponent,\r\n    props: args,\r\n    template: `<app-button>Button</app-button>`,\r\n})"
-                }
-            ],
-            "src/app/shared/card/card.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/card/card.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/card/card.stories.ts",
-                    "type": "Story<CardComponent>",
-                    "defaultValue": "(args: CardComponent) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/app/shared/input/input.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/input/input.stories.ts",
-                    "type": "Story",
-                    "defaultValue": "() => ({\r\n    template: '<input class=\"input\" />',\r\n})"
-                },
-                {
-                    "name": "Password",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/input/input.stories.ts",
-                    "type": "Story",
-                    "defaultValue": "() => ({\r\n    template: '<input class=\"input\" type=\"password\" />',\r\n  })"
-                }
-            ],
-            "src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false,\n  api: 'https://60a0033e7ee1430017bf1430.mockapi.io'\n}"
-                }
-            ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
-                }
-            ]
-        },
-        "groupedFunctions": {
-            "src/app/app.module.ts": [
-                {
-                    "name": "playerFactory",
-                    "file": "src/app/app.module.ts",
-                    "ctype": "miscellaneous",
-                    "subtype": "function",
-                    "description": "",
-                    "args": []
-                }
-            ]
-        },
-        "groupedEnumerations": {
-            "src/app/utils/constants/ElocalStorage.ts": [
-                {
-                    "name": "ELOCAL_STORAGE",
-                    "childs": [
-                        {
-                            "name": "products",
-                            "value": "dotz_products"
-                        }
-                    ],
-                    "ctype": "miscellaneous",
-                    "subtype": "enum",
-                    "description": "",
-                    "file": "src/app/utils/constants/ElocalStorage.ts"
-                }
-            ]
-        },
-        "groupedTypeAliases": {}
+      ],
+      "indexSignatures": [],
+      "kind": 150,
+      "methods": []
     },
-    "routes": {
-        "name": "<root>",
-        "kind": "module",
-        "className": "AppModule",
-        "children": [
-            {
-                "name": "routes",
-                "filename": "src/app/app-routing.module.ts",
-                "module": "AppRoutingModule",
-                "children": [
-                    {
-                        "path": "",
-                        "redirectTo": "/auth/login",
-                        "pathMatch": "full"
-                    },
-                    {
-                        "path": "",
-                        "loadChildren": "./pages/home#HomeModule",
-                        "children": [
-                            {
-                                "kind": "module",
-                                "children": [
-                                    {
-                                        "name": "routes",
-                                        "filename": "src/app/pages/home/home-routing.module.ts",
-                                        "module": "HomeRoutingModule",
-                                        "children": [
-                                            {
-                                                "path": "home",
-                                                "component": "HomeComponent"
-                                            },
-                                            {
-                                                "path": "products",
-                                                "component": "ProductsComponent"
-                                            }
-                                        ],
-                                        "kind": "module"
-                                    }
-                                ],
-                                "module": "HomeModule"
-                            }
-                        ]
-                    },
-                    {
-                        "path": "auth",
-                        "loadChildren": "./pages/auth/#AuthModule",
-                        "children": [
-                            {
-                                "kind": "module",
-                                "children": [
-                                    {
-                                        "name": "routes",
-                                        "filename": "src/app/pages/auth/auth-routing.module.ts",
-                                        "module": "AuthRoutingModule",
-                                        "children": [
-                                            {
-                                                "path": "login",
-                                                "component": "LoginInComponent"
-                                            },
-                                            {
-                                                "path": "signin",
-                                                "component": "SignInComponent"
-                                            }
-                                        ],
-                                        "kind": "module"
-                                    }
-                                ],
-                                "module": "AuthModule"
-                            }
-                        ]
-                    }
-                ],
-                "kind": "module"
-            }
-        ]
-    },
-    "coverage": {
-        "count": 0,
-        "status": "low",
-        "files": [
-            {
-                "filePath": "e2e/src/app.po.ts",
-                "type": "class",
-                "linktype": "classe",
-                "name": "AppPage",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/app.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "AppComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/2",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/app.module.ts",
-                "type": "function",
-                "linksubtype": "function",
-                "name": "playerFactory",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/core/models/products.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "ProductsDTO",
-                "coveragePercent": 0,
-                "coverageCount": "0/7",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/core/models/user.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "UserDTO",
-                "coveragePercent": 0,
-                "coverageCount": "0/9",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/core/services/api.service.ts",
-                "type": "injectable",
-                "linktype": "injectable",
-                "name": "ApiService",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/pages/auth/login-in/login-in.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "LoginInComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/pages/auth/sign-in/sign-in.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "SignInComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/pages/home/home.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "HomeComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/9",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/pages/home/products/products.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ProductsComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/shared/button/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/shared/button/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/shared/button/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/shared/card/card.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "CardComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/7",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/shared/card/card.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/shared/card/card.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/shared/input/input.stories.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "InputCompoent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/shared/input/input.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/shared/input/input.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Password",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/environments/environment.prod.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "environment",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/environments/environment.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "environment",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/test.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "context",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/test.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "require",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            }
-        ]
+    {
+      "name": "UserDTO",
+      "id": "interface-UserDTO-6ae813070fefdc30f3ba9089452c0c87",
+      "file": "src/app/core/models/user.ts",
+      "type": "interface",
+      "sourceCode": "export interface UserDTO {\r\n    id?:       string;\r\n    avatar?:   string;\r\n    email:    string;\r\n    password: number;\r\n    city?:     string;\r\n    state?:    string;\r\n    address?:  string;\r\n    zipcode?:  string;\r\n}\r\n",
+      "properties": [
+        {
+          "name": "address",
+          "type": "string",
+          "optional": true,
+          "description": "",
+          "line": 9
+        },
+        {
+          "name": "avatar",
+          "type": "string",
+          "optional": true,
+          "description": "",
+          "line": 4
+        },
+        {
+          "name": "city",
+          "type": "string",
+          "optional": true,
+          "description": "",
+          "line": 7
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "optional": false,
+          "description": "",
+          "line": 5
+        },
+        {
+          "name": "id",
+          "type": "string",
+          "optional": true,
+          "description": "",
+          "line": 3
+        },
+        {
+          "name": "password",
+          "type": "number",
+          "optional": false,
+          "description": "",
+          "line": 6
+        },
+        {
+          "name": "state",
+          "type": "string",
+          "optional": true,
+          "description": "",
+          "line": 8
+        },
+        {
+          "name": "zipcode",
+          "type": "string",
+          "optional": true,
+          "description": "",
+          "line": 10
+        }
+      ],
+      "indexSignatures": [],
+      "kind": 150,
+      "methods": []
     }
+  ],
+  "injectables": [
+    {
+      "name": "ApiService",
+      "id": "injectable-ApiService-e30b448be9e30cc779164c7625298611",
+      "file": "src/app/core/services/api.service.ts",
+      "properties": [
+        {
+          "name": "basePath",
+          "defaultValue": "environment.api",
+          "type": "",
+          "optional": false,
+          "description": "",
+          "line": 13,
+          "modifierKind": [112]
+        }
+      ],
+      "methods": [
+        {
+          "name": "getProducts",
+          "args": [],
+          "optional": false,
+          "returnType": "Observable<ProductsDTO[]>",
+          "typeParameters": [],
+          "line": 21
+        },
+        {
+          "name": "postUser",
+          "args": [
+            {
+              "name": "data",
+              "type": "UserDTO"
+            }
+          ],
+          "optional": false,
+          "returnType": "Observable<UserDTO>",
+          "typeParameters": [],
+          "line": 17,
+          "jsdoctags": [
+            {
+              "name": "data",
+              "type": "UserDTO",
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        }
+      ],
+      "description": "",
+      "sourceCode": "import { HttpClient } from '@angular/common/http';\nimport { Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { environment } from 'src/environments/environment';\nimport { ProductsDTO } from '../models/products';\nimport { UserDTO } from '../models/user';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class ApiService {\n\n  private basePath = environment.api\n\n  constructor( private http: HttpClient) { }\n\n  postUser(data: UserDTO): Observable<UserDTO> {\n    return this.http.post<UserDTO>(`${this.basePath}/user`, data)\n  }\n\n  getProducts():Observable<ProductsDTO[]> {\n    return this.http.get<ProductsDTO[]>(`${this.basePath}/products`)\n  }\n}\n",
+      "constructorObj": {
+        "name": "constructor",
+        "description": "",
+        "args": [
+          {
+            "name": "http",
+            "type": "HttpClient"
+          }
+        ],
+        "line": 13,
+        "jsdoctags": [
+          {
+            "name": "http",
+            "type": "HttpClient",
+            "tagName": {
+              "text": "param"
+            }
+          }
+        ]
+      },
+      "type": "injectable"
+    }
+  ],
+  "classes": [
+    {
+      "name": "AppPage",
+      "id": "class-AppPage-ee2067dfb1c303f41003aea7d82d51e0",
+      "file": "e2e/src/app.po.ts",
+      "type": "class",
+      "sourceCode": "import { browser, by, element } from 'protractor';\n\nexport class AppPage {\n  async navigateTo(): Promise<unknown> {\n    return browser.get(browser.baseUrl);\n  }\n\n  async getTitleText(): Promise<string> {\n    return element(by.css('app-root .content span')).getText();\n  }\n}\n",
+      "properties": [],
+      "methods": [
+        {
+          "name": "getTitleText",
+          "args": [],
+          "optional": false,
+          "returnType": "Promise<string>",
+          "typeParameters": [],
+          "line": 8,
+          "modifierKind": [120]
+        },
+        {
+          "name": "navigateTo",
+          "args": [],
+          "optional": false,
+          "returnType": "Promise<unknown>",
+          "typeParameters": [],
+          "line": 4,
+          "modifierKind": [120]
+        }
+      ],
+      "indexSignatures": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "hostBindings": [],
+      "hostListeners": []
+    }
+  ],
+  "directives": [],
+  "components": [
+    {
+      "name": "AppComponent",
+      "id": "component-AppComponent-3ee1a8cb982539c7eebf1b5ed5fa047f",
+      "file": "src/app/app.component.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-root",
+      "styleUrls": ["./app.component.scss"],
+      "styles": [],
+      "templateUrl": ["./app.component.html"],
+      "viewProviders": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "title",
+          "defaultValue": "'dotz'",
+          "type": "string",
+          "optional": false,
+          "description": "",
+          "line": 9
+        }
+      ],
+      "methodsClass": [],
+      "hostBindings": [],
+      "hostListeners": [],
+      "description": "",
+      "rawdescription": "",
+      "type": "component",
+      "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'dotz';\n}\n",
+      "assetsDirs": [],
+      "styleUrlsData": [
+        {
+          "data": "",
+          "styleUrl": "./app.component.scss"
+        }
+      ],
+      "stylesData": "",
+      "templateData": "<main>\r\n    <router-outlet></router-outlet>\r\n</main>"
+    },
+    {
+      "name": "ButtonComponent",
+      "id": "component-ButtonComponent-b04be7073757fb03da9c74f1536c1fa5",
+      "file": "src/app/shared/button/button.component.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-button",
+      "styleUrls": [],
+      "styles": [],
+      "templateUrl": ["./button.component.html"],
+      "viewProviders": [],
+      "inputsClass": [
+        {
+          "name": "buttonType",
+          "defaultValue": "''",
+          "line": 10
+        },
+        {
+          "name": "type",
+          "defaultValue": "'primary'",
+          "line": 9,
+          "type": "\"primary\" | \"secondary\" | \"flat\""
+        }
+      ],
+      "outputsClass": [],
+      "propertiesClass": [],
+      "methodsClass": [
+        {
+          "name": "ngOnInit",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 14
+        }
+      ],
+      "hostBindings": [],
+      "hostListeners": [],
+      "description": "",
+      "rawdescription": "",
+      "type": "component",
+      "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n})\nexport class ButtonComponent implements OnInit {\n\n  @Input() type: 'primary' | 'secondary' | 'flat' = 'primary'\n  @Input() buttonType = '';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": "",
+      "constructorObj": {
+        "name": "constructor",
+        "description": "",
+        "args": [],
+        "line": 10
+      },
+      "implements": ["OnInit"],
+      "templateData": "<button\n  class=\"btn\"\n  [class.btn--secondary]=\"type === 'secondary'\"\n  [class.btn--flat]=\"type === 'flat'\"\n  [type]=\"buttonType\"\n>\n  <ng-content></ng-content>\n</button>\n"
+    },
+    {
+      "name": "CardComponent",
+      "id": "component-CardComponent-b6e2678f38d773a567a7d9aba98190dd",
+      "file": "src/app/shared/card/card.component.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-card",
+      "styleUrls": ["./card.component.scss"],
+      "styles": [],
+      "templateUrl": ["./card.component.html"],
+      "viewProviders": [],
+      "inputsClass": [
+        {
+          "name": "image",
+          "defaultValue": "'https://images.unsplash.com/photo-1565849904461-04a58ad377e0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2VsbCUyMHBob25lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'",
+          "line": 10,
+          "type": "string"
+        },
+        {
+          "name": "isSelect",
+          "defaultValue": "false",
+          "line": 13,
+          "type": "boolean"
+        },
+        {
+          "name": "name",
+          "defaultValue": "'Phone'",
+          "line": 11,
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "defaultValue": "'1000'",
+          "line": 12,
+          "type": "string"
+        }
+      ],
+      "outputsClass": [],
+      "propertiesClass": [],
+      "methodsClass": [
+        {
+          "name": "ngOnInit",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 16
+        }
+      ],
+      "hostBindings": [],
+      "hostListeners": [],
+      "description": "",
+      "rawdescription": "",
+      "type": "component",
+      "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-card',\n  templateUrl: './card.component.html',\n  styleUrls: ['./card.component.scss']\n})\nexport class CardComponent implements OnInit {\n\n  @Input() image: string = 'https://images.unsplash.com/photo-1565849904461-04a58ad377e0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2VsbCUyMHBob25lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'\n  @Input() name: string = 'Phone'\n  @Input() price: string = '1000'\n  @Input() isSelect: boolean = false\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+      "assetsDirs": [],
+      "styleUrlsData": [
+        {
+          "data": "@import \"../../../styles/_variables\";\r\n.card {\r\n  display: flex;\r\n  justify-content: space-between;\r\n\r\n  max-width: 360px;\r\n  width: 100%;\r\n  height: 165px;\r\n  border-radius: 15px;\r\n\r\n  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.168734));\r\n\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  background-position: center;\r\n\r\n  cursor: pointer;\r\n\r\n  transition: .5s;\r\n\r\n  h1 {\r\n    font-size: $titleSmall;\r\n    color: white;\r\n    padding: 6px 10px 6px 10px;\r\n  }\r\n\r\n  p {\r\n    width: 100px;\r\n    height: 55px;\r\n    background: rgba(255, 255, 255, 0.902633);\r\n    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.348967);\r\n    border-radius: 15px;\r\n    align-self: flex-end;\r\n    margin: 8px;\r\n    color: $orange;\r\n    font-size: $titleSmall;\r\n\r\n    display: flex;\r\n    place-content: center;\r\n    place-items: center;\r\n    line-height: 35px;\r\n  }\r\n\r\n  &--opacity {\r\n    opacity: 0.5;\r\n  }\r\n}\r\n",
+          "styleUrl": "./card.component.scss"
+        }
+      ],
+      "stylesData": "",
+      "constructorObj": {
+        "name": "constructor",
+        "description": "",
+        "args": [],
+        "line": 13
+      },
+      "implements": ["OnInit"],
+      "templateData": "<section\n  class=\"card\"\n  [class.card--opacity]=\"isSelect\"\n  [ngStyle]=\"{\n    'background-image': 'url(' + image + ')'\n  }\"\n  data-testid=\"card\"\n>\n  <h1>{{ name }}</h1>\n  <p>{{ price }} pts</p>\n</section>\n"
+    },
+    {
+      "name": "HomeComponent",
+      "id": "component-HomeComponent-bcf5f599077e849476016c5785b47f9d",
+      "file": "src/app/pages/home/home.component.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-home",
+      "styleUrls": ["./home.component.scss"],
+      "styles": [],
+      "templateUrl": ["./home.component.html"],
+      "viewProviders": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "options",
+          "defaultValue": "{\n    path: '../../../assets/loading.json',\n  }",
+          "type": "AnimationOptions",
+          "optional": false,
+          "description": "",
+          "line": 16
+        },
+        {
+          "name": "products$",
+          "type": "Observable<ProductsDTO[]>",
+          "optional": false,
+          "description": "",
+          "line": 20
+        },
+        {
+          "name": "pts",
+          "defaultValue": "1000",
+          "type": "number",
+          "optional": false,
+          "description": "",
+          "line": 22
+        },
+        {
+          "name": "selectedProducts",
+          "defaultValue": "[]",
+          "type": "ProductsDTO[]",
+          "optional": false,
+          "description": "",
+          "line": 24
+        }
+      ],
+      "methodsClass": [
+        {
+          "name": "isSelected",
+          "args": [
+            {
+              "name": "product",
+              "type": "ProductsDTO"
+            }
+          ],
+          "optional": false,
+          "returnType": "boolean",
+          "typeParameters": [],
+          "line": 32,
+          "jsdoctags": [
+            {
+              "name": "product",
+              "type": "ProductsDTO",
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ngOnInit",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 28
+        },
+        {
+          "name": "onClick",
+          "args": [
+            {
+              "name": "product",
+              "type": "ProductsDTO"
+            }
+          ],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 37,
+          "jsdoctags": [
+            {
+              "name": "product",
+              "type": "ProductsDTO",
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        }
+      ],
+      "hostBindings": [],
+      "hostListeners": [],
+      "description": "",
+      "rawdescription": "",
+      "type": "component",
+      "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { AnimationOptions } from 'ngx-lottie';\nimport { Observable } from 'rxjs';\nimport { ProductsDTO } from 'src/app/core/models/products';\nimport { ApiService } from 'src/app/core/services/api.service';\nimport { ELOCAL_STORAGE } from 'src/app/utils/constants/ElocalStorage';\n\n\n@Component({\n  selector: 'app-home',\n  templateUrl: './home.component.html',\n  styleUrls: ['./home.component.scss'],\n})\nexport class HomeComponent implements OnInit {\n\n  options: AnimationOptions = {\n    path: '../../../assets/loading.json',\n  };\n\n  products$!: Observable<ProductsDTO[]>;\n\n  pts = 1000\n\n  selectedProducts: ProductsDTO[] = [];\n\n  constructor(private apiService: ApiService) {}\n\n  ngOnInit(): void {\n    this.products$ = this.apiService.getProducts();\n  }\n\n  isSelected(product: ProductsDTO): boolean {\n    const hasIndex = this.selectedProducts.indexOf(product);\n    return hasIndex > -1;\n  }\n\n  onClick(product: ProductsDTO) {\n    const hasIndex = this.selectedProducts.indexOf(product);\n\n    if (hasIndex > -1) {\n      this.selectedProducts = this.selectedProducts.filter(\n        (target) => target != product\n      );\n      this.pts += +product.price\n    }\n    else {\n      let pts = this.pts\n      pts -= +product.price\n      if(pts >= 0) {\n        this.selectedProducts.push(product);\n        this.pts = pts\n      }\n    }\n\n    localStorage.setItem(ELOCAL_STORAGE.products, JSON.stringify(this.selectedProducts))\n  }\n\n}\n",
+      "assetsDirs": [],
+      "styleUrlsData": [
+        {
+          "data": "@import '../../../styles/_variables';\r\n.home {\r\n\r\n    max-width: 1080px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    margin-top: 20px;\r\n    >div {\r\n        width: 100%;\r\n    }\r\n\r\n    &__header {\r\n        padding: 8px;\r\n        display: flex;\r\n        place-content: space-between;\r\n\r\n        width: 100%;\r\n\r\n        font-size: $titleSmall;\r\n        h1 {\r\n            color: $orange;\r\n        }\r\n\r\n        h3 {\r\n            color: $grayText;\r\n        }\r\n    }\r\n\r\n    &__nav {\r\n        font-size: $textLarge;\r\n        color: $grayText;\r\n\r\n        ul {\r\n            margin-top: 8px;\r\n            display: flex;\r\n            flex-direction: row;\r\n            place-content: center;\r\n\r\n            li + li {\r\n                margin-left: 18px;\r\n            }\r\n\r\n            li {\r\n                display: flex;\r\n                white-space: nowrap;\r\n                line-height: 21px;\r\n                width: min-content;\r\n                cursor: pointer;\r\n\r\n                &.active {\r\n                    color: $orange;\r\n                    border-bottom: 2px solid;\r\n                }\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n    &__products {\r\n        margin-top: 24px;\r\n        display: grid;\r\n        grid-template-columns: repeat(auto-fill, minmax(300px, 356px));\r\n        gap: 5px;\r\n        place-content: center;\r\n    }\r\n}",
+          "styleUrl": "./home.component.scss"
+        }
+      ],
+      "stylesData": "",
+      "constructorObj": {
+        "name": "constructor",
+        "description": "",
+        "args": [
+          {
+            "name": "apiService",
+            "type": "ApiService"
+          }
+        ],
+        "line": 24,
+        "jsdoctags": [
+          {
+            "name": "apiService",
+            "type": "ApiService",
+            "tagName": {
+              "text": "param"
+            }
+          }
+        ]
+      },
+      "implements": ["OnInit"],
+      "templateData": "<section class=\"home\">\n  <div>\n    <header class=\"home__header\">\n      <h1>Dotz</h1>\n      <h3>Pts {{pts}}</h3>\n    </header>\n\n    <nav class=\"home__nav\">\n      <ul>\n        <li routerLink=\"/home\" routerLinkActive=\"active\">Home</li>\n        <li routerLink=\"/products\" routerLinkActive=\"active\">Meus pedidos</li>\n      </ul>\n    </nav>\n  </div>\n\n  <div class=\"home__products\" *ngIf=\"products$ | async as products; else loading\">\n    \n    <ng-container *ngFor=\"let product of products$ | async\">\n      <app-card [image]='product.image' [name]=\"product.name\" [price]=\"product.price\" [isSelect]=\"isSelected(product)\" (click)=\"onClick(product)\"></app-card>\n    </ng-container>\n  </div>\n  <ng-template #loading>\n    <ng-lottie [options]=\"options\"></ng-lottie>\n  </ng-template>\n</section>\n"
+    },
+    {
+      "name": "InputCompoent",
+      "id": "component-InputCompoent-68d281378986f1ed291096d81e53a7aa",
+      "file": "src/app/shared/input/input.stories.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-button",
+      "styleUrls": [],
+      "styles": [],
+      "template": "",
+      "templateUrl": [],
+      "viewProviders": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [],
+      "methodsClass": [],
+      "hostBindings": [],
+      "hostListeners": [],
+      "description": "",
+      "rawdescription": "",
+      "type": "component",
+      "sourceCode": "import { Component } from '@angular/core';\r\nimport { Story, Meta } from '@storybook/angular/types-6-0';\r\n\r\n@Component({\r\n    selector: 'app-button',\r\n    template: '',\r\n})\r\nclass InputCompoent { }\r\n\r\nexport default {\r\n    title: 'shared/Input',\r\n} as Meta<InputCompoent>;\r\n\r\n\r\nexport const Default: Story = () => ({\r\n    template: '<input class=\"input\" />',\r\n});\r\n\r\nexport const Password: Story = () => ({\r\n    template: '<input class=\"input\" type=\"password\" />',\r\n  });\r\n",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": ""
+    },
+    {
+      "name": "LoginInComponent",
+      "id": "component-LoginInComponent-454cb53d1f7078552c686874d8cde734",
+      "file": "src/app/pages/auth/login-in/login-in.component.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-login-in",
+      "styleUrls": ["./login-in.component.scss"],
+      "styles": [],
+      "templateUrl": ["./login-in.component.html"],
+      "viewProviders": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "loginForm",
+          "defaultValue": "this.fb.group({\r\n    email: [''],\r\n    password: [''],\r\n  })",
+          "type": "",
+          "optional": false,
+          "description": "",
+          "line": 13
+        }
+      ],
+      "methodsClass": [
+        {
+          "name": "ngOnInit",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 24
+        },
+        {
+          "name": "onSubmit",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 26
+        }
+      ],
+      "hostBindings": [],
+      "hostListeners": [],
+      "description": "",
+      "rawdescription": "",
+      "type": "component",
+      "sourceCode": "import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';\r\nimport { Component, OnInit } from '@angular/core';\r\nimport { FormBuilder } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { ApiService } from 'src/app/core/services/api.service';\r\n\r\n@Component({\r\n  selector: 'app-login-in',\r\n  templateUrl: './login-in.component.html',\r\n  styleUrls: ['./login-in.component.scss'],\r\n})\r\nexport class LoginInComponent implements OnInit {\r\n  loginForm = this.fb.group({\r\n    email: [''],\r\n    password: [''],\r\n  });\r\n\r\n  constructor(\r\n    private fb: FormBuilder,\r\n    private apiService: ApiService,\r\n    private router: Router\r\n  ) { }\r\n\r\n  ngOnInit(): void {}\r\n\r\n  onSubmit() {\r\n    this.apiService\r\n      .postUser(this.loginForm.value)\r\n      .toPromise()\r\n      .then(() => this.router.navigate(['/home']));\r\n  }\r\n}\r\n",
+      "assetsDirs": [],
+      "styleUrlsData": [
+        {
+          "data": "@import './../../../../styles/_variables';\r\n.login {\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    height: 100vh;\r\n\r\n    > div {\r\n        max-width: 800px;\r\n        margin: auto;\r\n    }\r\n\r\n    &__presentation {\r\n        color: $orange;\r\n        margin-top: 40px;\r\n        margin-bottom: 30px;\r\n        h1 {\r\n            \r\n            margin-top: calc(auto - 40%);\r\n            font-size: $titleSmall;\r\n        }\r\n    \r\n        p {\r\n            font-size: $title;\r\n            color: $blue;\r\n        }\r\n    }\r\n\r\n    &__form {\r\n        input + input {\r\n            margin-top: 25px;\r\n        }\r\n        \r\n        &__buttons {\r\n            margin-top: 20px;\r\n            display: grid;\r\n            grid-template-columns: 1fr;\r\n            row-gap: 20px;\r\n\r\n            > div {\r\n                display: flex;\r\n                flex-direction: column;\r\n                place-content: center;\r\n            }\r\n\r\n            span {\r\n                font-size: $textMedium;\r\n                color: $grayText;\r\n                margin: auto;\r\n            }\r\n\r\n            app-button {\r\n                width: 100%;\r\n                button {\r\n                    width: 100%;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n}",
+          "styleUrl": "./login-in.component.scss"
+        }
+      ],
+      "stylesData": "",
+      "constructorObj": {
+        "name": "constructor",
+        "description": "",
+        "args": [
+          {
+            "name": "fb",
+            "type": "FormBuilder"
+          },
+          {
+            "name": "apiService",
+            "type": "ApiService"
+          },
+          {
+            "name": "router",
+            "type": "Router"
+          }
+        ],
+        "line": 16,
+        "jsdoctags": [
+          {
+            "name": "fb",
+            "type": "FormBuilder",
+            "tagName": {
+              "text": "param"
+            }
+          },
+          {
+            "name": "apiService",
+            "type": "ApiService",
+            "tagName": {
+              "text": "param"
+            }
+          },
+          {
+            "name": "router",
+            "type": "Router",
+            "tagName": {
+              "text": "param"
+            }
+          }
+        ]
+      },
+      "implements": ["OnInit"],
+      "templateData": "<section class=\"login\">\n    <div>\n        <div class=\"login__presentation\">\n            <h1>Dotz</h1>\n            <p>Controle seus pontos de forma muito simples</p>\n        </div>\n    \n      <form class=\"login__form\" [formGroup]=\"loginForm\">\n          <input class=\"input\" type=\"email\" placeholder=\"Email\"  formControlName=\"email\"/>\n          <input class=\"input\" type=\"password\" placeholder=\"Senha\" formControlName=\"password\"/>\n          <div class=\"login__form__buttons\">\n              <app-button buttonType=\"submit\" (click)=\"onSubmit()\"> Entrar </app-button>\n              <div>\n                  <span>Ainda não é cadastrado?</span>\n                  <app-button routerLink=\"/auth/signin\" type=\"flat\" buttonType=\"button\"> Criar uma conta </app-button>\n              </div>\n          </div>\n      </form>\n    </div>\n</section>\n"
+    },
+    {
+      "name": "ProductsComponent",
+      "id": "component-ProductsComponent-930cf4fedd0f4df4430e4d4fc29e0820",
+      "file": "src/app/pages/home/products/products.component.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-products",
+      "styleUrls": ["./products.component.scss"],
+      "styles": [],
+      "templateUrl": ["./products.component.html"],
+      "viewProviders": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [],
+      "methodsClass": [],
+      "hostBindings": [],
+      "hostListeners": [],
+      "description": "",
+      "rawdescription": "",
+      "type": "component",
+      "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { ProductsDTO } from 'src/app/core/models/products';\nimport { ELOCAL_STORAGE } from 'src/app/utils/constants/ElocalStorage';\n\n@Component({\n  selector: 'app-products',\n  templateUrl: './products.component.html',\n  styleUrls: ['./products.component.scss'],\n})\nexport class ProductsComponent {\n  get products(): ProductsDTO[] {\n    return JSON.parse(\n      localStorage.getItem(ELOCAL_STORAGE.products)!\n    ) as ProductsDTO[];\n  }\n}\n",
+      "assetsDirs": [],
+      "styleUrlsData": [
+        {
+          "data": "@import '../../../../styles/_variables';\r\n.products {\r\n\r\n    max-width: 1080px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    margin-top: 20px;\r\n    >div {\r\n        width: 100%;\r\n    }\r\n\r\n    &__header {\r\n        padding: 8px;\r\n        display: flex;\r\n        place-content: space-between;\r\n\r\n        width: 100%;\r\n\r\n        font-size: $titleSmall;\r\n        h1 {\r\n            color: $orange;\r\n        }\r\n\r\n        h3 {\r\n            color: $grayText;\r\n        }\r\n    }\r\n\r\n    &__nav {\r\n        font-size: $textLarge;\r\n        color: $grayText;\r\n\r\n        ul {\r\n            margin-top: 8px;\r\n            display: flex;\r\n            flex-direction: row;\r\n            place-content: center;\r\n\r\n            li + li {\r\n                margin-left: 18px;\r\n            }\r\n\r\n            li {\r\n                display: flex;\r\n                white-space: nowrap;\r\n                line-height: 21px;\r\n                width: min-content;\r\n                cursor: pointer;\r\n\r\n                &.active {\r\n                    color: $orange;\r\n                    border-bottom: 2px solid;\r\n                }\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n    &__products {\r\n        margin-top: 24px;\r\n        display: grid;\r\n        grid-template-columns: repeat(auto-fill, minmax(300px, 356px));\r\n        gap: 5px;\r\n        place-content: center;\r\n    }\r\n}",
+          "styleUrl": "./products.component.scss"
+        }
+      ],
+      "stylesData": "",
+      "accessors": {
+        "products": {
+          "name": "products",
+          "getSignature": {
+            "name": "products",
+            "type": "[]",
+            "returnType": "ProductsDTO[]",
+            "line": 11
+          }
+        }
+      },
+      "templateData": "<section class=\"products\">\n  <div>\n    <header class=\"products__header\">\n      <h1>Dotz</h1>\n    </header>\n\n    <nav class=\"products__nav\">\n      <ul>\n        <li routerLink=\"/home\" routerLinkActive=\"active\">Home</li>\n        <li routerLink=\"/products\" routerLinkActive=\"active\">Meus pedidos</li>\n      </ul>\n    </nav>\n  </div>\n\n  <div class=\"products__products\">\n    <ng-container *ngFor=\"let product of products\">\n      <app-card\n        [image]=\"product.image\"\n        [name]=\"product.name\"\n        [price]=\"product.price\"\n      ></app-card>\n    </ng-container>\n  </div>\n</section>\n"
+    },
+    {
+      "name": "SignInComponent",
+      "id": "component-SignInComponent-09d88646dda12a8b7e2cdfe0cd71946b",
+      "file": "src/app/pages/auth/sign-in/sign-in.component.ts",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "app-sign-in",
+      "styleUrls": ["./sign-in.component.scss"],
+      "styles": [],
+      "templateUrl": ["./sign-in.component.html"],
+      "viewProviders": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "signinForm",
+          "defaultValue": "this.fb.group({\n    email: [''],\n    password: [''],\n    city: [''],\n    state: [''],\n    address: [''],\n    zipcode: [''],\n  })",
+          "type": "",
+          "optional": false,
+          "description": "",
+          "line": 13
+        }
+      ],
+      "methodsClass": [
+        {
+          "name": "ngOnInit",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 28
+        },
+        {
+          "name": "onSubmit",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 31
+        }
+      ],
+      "hostBindings": [],
+      "hostListeners": [],
+      "description": "",
+      "rawdescription": "",
+      "type": "component",
+      "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder } from '@angular/forms';\nimport { Router } from '@angular/router';\nimport { ApiService } from 'src/app/core/services/api.service';\n\n@Component({\n  selector: 'app-sign-in',\n  templateUrl: './sign-in.component.html',\n  styleUrls: ['./sign-in.component.scss']\n})\nexport class SignInComponent implements OnInit {\n\n  signinForm = this.fb.group({\n    email: [''],\n    password: [''],\n    city: [''],\n    state: [''],\n    address: [''],\n    zipcode: [''],\n  });\n\n  constructor(\n    private fb: FormBuilder,\n    private apiService: ApiService,\n    private router: Router\n  ) {}\n\n  ngOnInit(): void {\n  }\n\n  onSubmit() {\n    this.apiService\n      .postUser(this.signinForm.value)\n      .toPromise()\n      .then(() => this.router.navigate(['/auth/login']));\n  }\n\n}\n",
+      "assetsDirs": [],
+      "styleUrlsData": [
+        {
+          "data": "@import './../../../../styles/_variables';\r\n.signin {\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n    height: 100vh;\r\n\r\n    > div {\r\n        max-width: 800px;\r\n        margin: auto;\r\n    }\r\n\r\n    &__presentation {\r\n        color: $orange;\r\n        margin-top: 40px;\r\n        margin-bottom: 30px;\r\n        h1 {\r\n            \r\n            margin-top: calc(auto - 40%);\r\n            font-size: $titleSmall;\r\n        }\r\n    \r\n        p {\r\n            font-size: $title;\r\n            color: $blue;\r\n        }\r\n    }\r\n\r\n    &__form {\r\n        input + input {\r\n            margin-top: 25px;\r\n        }\r\n        \r\n        &__buttons {\r\n            margin-top: 20px;\r\n            display: grid;\r\n            grid-template-columns: 1fr;\r\n            row-gap: 20px;\r\n\r\n            > div {\r\n                display: flex;\r\n                flex-direction: column;\r\n                place-content: center;\r\n            }\r\n\r\n            span {\r\n                font-size: $textMedium;\r\n                color: $grayText;\r\n                margin: auto;\r\n            }\r\n\r\n            app-button {\r\n                width: 100%;\r\n                button {\r\n                    width: 100%;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n}",
+          "styleUrl": "./sign-in.component.scss"
+        }
+      ],
+      "stylesData": "",
+      "constructorObj": {
+        "name": "constructor",
+        "description": "",
+        "args": [
+          {
+            "name": "fb",
+            "type": "FormBuilder"
+          },
+          {
+            "name": "apiService",
+            "type": "ApiService"
+          },
+          {
+            "name": "router",
+            "type": "Router"
+          }
+        ],
+        "line": 20,
+        "jsdoctags": [
+          {
+            "name": "fb",
+            "type": "FormBuilder",
+            "tagName": {
+              "text": "param"
+            }
+          },
+          {
+            "name": "apiService",
+            "type": "ApiService",
+            "tagName": {
+              "text": "param"
+            }
+          },
+          {
+            "name": "router",
+            "type": "Router",
+            "tagName": {
+              "text": "param"
+            }
+          }
+        ]
+      },
+      "implements": ["OnInit"],
+      "templateData": "<section class=\"signin\">\n    <div>\n        <div class=\"signin__presentation\">\n            <h1>Dotz</h1>\n            <p>Controle seus pontos de forma muito simples</p>\n        </div>\n    \n      <form class=\"signin__form\" [formGroup]=\"signinForm\">\n          <input class=\"input\" type=\"email\" placeholder=\"Email\"  formControlName=\"email\"/>\n          <input class=\"input\" type=\"password\" placeholder=\"Senha\" formControlName=\"password\"/>\n          <input class=\"input\" type=\"text\" placeholder=\"Cidade\" formControlName=\"city\"/>\n          <input class=\"input\" type=\"state\" placeholder=\"Estado\" formControlName=\"state\"/>\n          <input class=\"input\" type=\"address\" placeholder=\"Rua\" formControlName=\"address\"/>\n          <input class=\"input\" type=\"zipcode\" placeholder=\"Código Postal\" mask=\"99999-999\" formControlName=\"zipcode\"/>\n          <div class=\"signin__form__buttons\">\n              <app-button buttonType=\"submit\" (click)=\"onSubmit()\"> Cadastrar </app-button>\n              <div>\n                  <span>Ja é cadastrado?</span>\n                  <app-button routerLink=\"/auth/login\" type=\"flat\" buttonType=\"button\"> Fazer login </app-button>\n              </div>\n          </div>\n      </form>\n    </div>\n</section>\n"
+    }
+  ],
+  "modules": [
+    {
+      "name": "AppModule",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": [
+            {
+              "name": "AppComponent"
+            }
+          ]
+        },
+        {
+          "type": "imports",
+          "elements": [
+            {
+              "name": "AppRoutingModule"
+            },
+            {
+              "name": "CoreModule"
+            }
+          ]
+        },
+        {
+          "type": "exports",
+          "elements": []
+        },
+        {
+          "type": "bootstrap",
+          "elements": [
+            {
+              "name": "AppComponent"
+            }
+          ]
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "AppRoutingModule",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": []
+        },
+        {
+          "type": "imports",
+          "elements": []
+        },
+        {
+          "type": "exports",
+          "elements": []
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "AuthModule",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": [
+            {
+              "name": "LoginInComponent"
+            },
+            {
+              "name": "SignInComponent"
+            }
+          ]
+        },
+        {
+          "type": "imports",
+          "elements": [
+            {
+              "name": "AuthRoutingModule"
+            },
+            {
+              "name": "SharedModule"
+            }
+          ]
+        },
+        {
+          "type": "exports",
+          "elements": []
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "AuthRoutingModule",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": []
+        },
+        {
+          "type": "imports",
+          "elements": []
+        },
+        {
+          "type": "exports",
+          "elements": []
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "CoreModule",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": []
+        },
+        {
+          "type": "imports",
+          "elements": []
+        },
+        {
+          "type": "exports",
+          "elements": []
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "HomeModule",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": [
+            {
+              "name": "HomeComponent"
+            },
+            {
+              "name": "ProductsComponent"
+            }
+          ]
+        },
+        {
+          "type": "imports",
+          "elements": [
+            {
+              "name": "HomeRoutingModule"
+            },
+            {
+              "name": "SharedModule"
+            }
+          ]
+        },
+        {
+          "type": "exports",
+          "elements": []
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "HomeRoutingModule",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": []
+        },
+        {
+          "type": "imports",
+          "elements": []
+        },
+        {
+          "type": "exports",
+          "elements": []
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "SharedModule",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": [
+            {
+              "name": "ButtonComponent"
+            },
+            {
+              "name": "CardComponent"
+            }
+          ]
+        },
+        {
+          "type": "imports",
+          "elements": []
+        },
+        {
+          "type": "exports",
+          "elements": [
+            {
+              "name": "ButtonComponent"
+            },
+            {
+              "name": "CardComponent"
+            }
+          ]
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    }
+  ],
+  "miscellaneous": {
+    "variables": [
+      {
+        "name": "context",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/test.ts",
+        "type": "",
+        "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+      },
+      {
+        "name": "Default",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/app/shared/button/button.stories.ts",
+        "type": "",
+        "defaultValue": "Template.bind({})"
+      },
+      {
+        "name": "Default",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/app/shared/card/card.stories.ts",
+        "type": "",
+        "defaultValue": "Template.bind({})"
+      },
+      {
+        "name": "Default",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/app/shared/input/input.stories.ts",
+        "type": "Story",
+        "defaultValue": "() => ({\r\n    template: '<input class=\"input\" />',\r\n})"
+      },
+      {
+        "name": "environment",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/environments/environment.ts",
+        "type": "object",
+        "defaultValue": "{\n  production: false,\n  api: 'https://60a0033e7ee1430017bf1430.mockapi.io'\n}"
+      },
+      {
+        "name": "environment",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/environments/environment.prod.ts",
+        "type": "object",
+        "defaultValue": "{\n  production: true\n}"
+      },
+      {
+        "name": "Password",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/app/shared/input/input.stories.ts",
+        "type": "Story",
+        "defaultValue": "() => ({\r\n    template: '<input class=\"input\" type=\"password\" />',\r\n  })"
+      },
+      {
+        "name": "require",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/test.ts",
+        "type": "literal type"
+      },
+      {
+        "name": "Template",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/app/shared/button/button.stories.ts",
+        "type": "Story<ButtonComponent>",
+        "defaultValue": "(args: ButtonComponent) => ({\r\n    component: ButtonComponent,\r\n    props: args,\r\n    template: `<app-button>Button</app-button>`,\r\n})"
+      },
+      {
+        "name": "Template",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "src/app/shared/card/card.stories.ts",
+        "type": "Story<CardComponent>",
+        "defaultValue": "(args: CardComponent) => ({\r\n  props: args,\r\n})"
+      }
+    ],
+    "functions": [
+      {
+        "name": "playerFactory",
+        "file": "src/app/app.module.ts",
+        "ctype": "miscellaneous",
+        "subtype": "function",
+        "description": "",
+        "args": []
+      }
+    ],
+    "typealiases": [],
+    "enumerations": [
+      {
+        "name": "ELOCAL_STORAGE",
+        "childs": [
+          {
+            "name": "products",
+            "value": "dotz_products"
+          }
+        ],
+        "ctype": "miscellaneous",
+        "subtype": "enum",
+        "description": "",
+        "file": "src/app/utils/constants/ElocalStorage.ts"
+      }
+    ],
+    "groupedVariables": {
+      "src/test.ts": [
+        {
+          "name": "context",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/test.ts",
+          "type": "",
+          "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+        },
+        {
+          "name": "require",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/test.ts",
+          "type": "literal type"
+        }
+      ],
+      "src/app/shared/button/button.stories.ts": [
+        {
+          "name": "Default",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/app/shared/button/button.stories.ts",
+          "type": "",
+          "defaultValue": "Template.bind({})"
+        },
+        {
+          "name": "Template",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/app/shared/button/button.stories.ts",
+          "type": "Story<ButtonComponent>",
+          "defaultValue": "(args: ButtonComponent) => ({\r\n    component: ButtonComponent,\r\n    props: args,\r\n    template: `<app-button>Button</app-button>`,\r\n})"
+        }
+      ],
+      "src/app/shared/card/card.stories.ts": [
+        {
+          "name": "Default",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/app/shared/card/card.stories.ts",
+          "type": "",
+          "defaultValue": "Template.bind({})"
+        },
+        {
+          "name": "Template",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/app/shared/card/card.stories.ts",
+          "type": "Story<CardComponent>",
+          "defaultValue": "(args: CardComponent) => ({\r\n  props: args,\r\n})"
+        }
+      ],
+      "src/app/shared/input/input.stories.ts": [
+        {
+          "name": "Default",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/app/shared/input/input.stories.ts",
+          "type": "Story",
+          "defaultValue": "() => ({\r\n    template: '<input class=\"input\" />',\r\n})"
+        },
+        {
+          "name": "Password",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/app/shared/input/input.stories.ts",
+          "type": "Story",
+          "defaultValue": "() => ({\r\n    template: '<input class=\"input\" type=\"password\" />',\r\n  })"
+        }
+      ],
+      "src/environments/environment.ts": [
+        {
+          "name": "environment",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/environments/environment.ts",
+          "type": "object",
+          "defaultValue": "{\n  production: false,\n  api: 'https://60a0033e7ee1430017bf1430.mockapi.io'\n}"
+        }
+      ],
+      "src/environments/environment.prod.ts": [
+        {
+          "name": "environment",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "src/environments/environment.prod.ts",
+          "type": "object",
+          "defaultValue": "{\n  production: true\n}"
+        }
+      ]
+    },
+    "groupedFunctions": {
+      "src/app/app.module.ts": [
+        {
+          "name": "playerFactory",
+          "file": "src/app/app.module.ts",
+          "ctype": "miscellaneous",
+          "subtype": "function",
+          "description": "",
+          "args": []
+        }
+      ]
+    },
+    "groupedEnumerations": {
+      "src/app/utils/constants/ElocalStorage.ts": [
+        {
+          "name": "ELOCAL_STORAGE",
+          "childs": [
+            {
+              "name": "products",
+              "value": "dotz_products"
+            }
+          ],
+          "ctype": "miscellaneous",
+          "subtype": "enum",
+          "description": "",
+          "file": "src/app/utils/constants/ElocalStorage.ts"
+        }
+      ]
+    },
+    "groupedTypeAliases": {}
+  },
+  "routes": {
+    "name": "<root>",
+    "kind": "module",
+    "className": "AppModule",
+    "children": [
+      {
+        "name": "routes",
+        "filename": "src/app/app-routing.module.ts",
+        "module": "AppRoutingModule",
+        "children": [
+          {
+            "path": "",
+            "redirectTo": "/auth/login",
+            "pathMatch": "full"
+          },
+          {
+            "path": "",
+            "loadChildren": "./pages/home#HomeModule",
+            "children": [
+              {
+                "kind": "module",
+                "children": [
+                  {
+                    "name": "routes",
+                    "filename": "src/app/pages/home/home-routing.module.ts",
+                    "module": "HomeRoutingModule",
+                    "children": [
+                      {
+                        "path": "home",
+                        "component": "HomeComponent"
+                      },
+                      {
+                        "path": "products",
+                        "component": "ProductsComponent"
+                      }
+                    ],
+                    "kind": "module"
+                  }
+                ],
+                "module": "HomeModule"
+              }
+            ]
+          },
+          {
+            "path": "auth",
+            "loadChildren": "./pages/auth/#AuthModule",
+            "children": [
+              {
+                "kind": "module",
+                "children": [
+                  {
+                    "name": "routes",
+                    "filename": "src/app/pages/auth/auth-routing.module.ts",
+                    "module": "AuthRoutingModule",
+                    "children": [
+                      {
+                        "path": "login",
+                        "component": "LoginInComponent"
+                      },
+                      {
+                        "path": "signin",
+                        "component": "SignInComponent"
+                      }
+                    ],
+                    "kind": "module"
+                  }
+                ],
+                "module": "AuthModule"
+              }
+            ]
+          }
+        ],
+        "kind": "module"
+      }
+    ]
+  },
+  "coverage": {
+    "count": 0,
+    "status": "low",
+    "files": [
+      {
+        "filePath": "e2e/src/app.po.ts",
+        "type": "class",
+        "linktype": "classe",
+        "name": "AppPage",
+        "coveragePercent": 0,
+        "coverageCount": "0/3",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/app.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "AppComponent",
+        "coveragePercent": 0,
+        "coverageCount": "0/2",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/app.module.ts",
+        "type": "function",
+        "linksubtype": "function",
+        "name": "playerFactory",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/core/models/products.ts",
+        "type": "interface",
+        "linktype": "interface",
+        "name": "ProductsDTO",
+        "coveragePercent": 0,
+        "coverageCount": "0/7",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/core/models/user.ts",
+        "type": "interface",
+        "linktype": "interface",
+        "name": "UserDTO",
+        "coveragePercent": 0,
+        "coverageCount": "0/9",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/core/services/api.service.ts",
+        "type": "injectable",
+        "linktype": "injectable",
+        "name": "ApiService",
+        "coveragePercent": 0,
+        "coverageCount": "0/5",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/pages/auth/login-in/login-in.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "LoginInComponent",
+        "coveragePercent": 0,
+        "coverageCount": "0/5",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/pages/auth/sign-in/sign-in.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "SignInComponent",
+        "coveragePercent": 0,
+        "coverageCount": "0/5",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/pages/home/home.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "HomeComponent",
+        "coveragePercent": 0,
+        "coverageCount": "0/9",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/pages/home/products/products.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ProductsComponent",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/button/button.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ButtonComponent",
+        "coveragePercent": 0,
+        "coverageCount": "0/5",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/button/button.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/button/button.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Template",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/card/card.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "CardComponent",
+        "coveragePercent": 0,
+        "coverageCount": "0/7",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/card/card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/card/card.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Template",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/input/input.stories.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "InputCompoent",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/input/input.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/app/shared/input/input.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Password",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/environments/environment.prod.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "environment",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/environments/environment.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "environment",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/test.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "context",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "src/test.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "require",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      }
+    ]
+  }
 }

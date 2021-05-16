@@ -25,13 +25,12 @@ describe('LoginInComponent', () => {
 
   const apiServiceSpy = {
     postUser: () => of(true),
-    getProducts: () => of(true)
-  }
+    getProducts: () => of(true),
+  };
 
   let mockRouter = {
-    navigate: jasmine.createSpy('navigate')
+    navigate: jasmine.createSpy('navigate'),
   };
-  
 
   const renderOptions: RenderComponentOptions<LoginInComponent> = {
     declarations: [ButtonComponent],
@@ -46,7 +45,7 @@ describe('LoginInComponent', () => {
         provide: ApiService,
         useValue: apiServiceSpy,
       },
-      { provide: Router, useValue: mockRouter }
+      { provide: Router, useValue: mockRouter },
     ],
   };
 
@@ -65,21 +64,20 @@ describe('LoginInComponent', () => {
     expect(
       screen.getByRole('heading', {
         name: /dotz/i,
-      })
+      }),
     ).toBeTruthy();
     expect(
-      screen.getByText(/controle seus pontos de forma muito simples/i)
+      screen.getByText(/controle seus pontos de forma muito simples/i),
     ).toBeTruthy();
 
     expect(
       screen.getByRole('button', {
         name: /entrar/i,
-      })
+      }),
     ).toBeTruthy();
   });
 
   it('should be able login', () => {
-    
     const emailInput = screen.getByPlaceholderText(/email/i);
     const passwordInput = screen.getByPlaceholderText(/senha/i);
 
@@ -89,11 +87,10 @@ describe('LoginInComponent', () => {
 
     userEvent.type(emailInput, 'emai@email.com');
     userEvent.type(passwordInput, '123456');
-    fireEvent.click(btnSubumit)
+    fireEvent.click(btnSubumit);
 
     setTimeout(() => {
       expect(mockRouter.navigate).toHaveBeenCalledWith(['/home']);
-    })
-
+    });
   });
 });

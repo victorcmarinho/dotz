@@ -1,26 +1,25 @@
 @import './_variables';
 
 .btn {
-    display: flex;
-    place-content: center;
+  display: flex;
+  place-content: center;
 
-    border: none;
-    border-radius: 5px;
-    height: 54px;
-    background-color: $orange;
+  border: none;
+  border-radius: 5px;
+  height: 54px;
+  background-color: $orange;
+  color: white;
+  font-size: $textMedium;
+  width: 100%;
+  padding: 16px;
+
+  &--secondary {
+    background-color: $blue;
     color: white;
-    font-size: $textMedium;
-    width: 100%;
-    padding: 16px;
+  }
 
-    
-    &--secondary {
-        background-color: $blue;
-        color: white;
-    }
-
-    &--flat {
-        background-color: white;
-        color: $orange;
-    }
+  &--flat {
+    background-color: white;
+    color: $orange;
+  }
 }

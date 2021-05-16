@@ -6,10 +6,9 @@ import { ApiService } from 'src/app/core/services/api.service';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+  styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent implements OnInit {
-
   signinForm = this.fb.group({
     email: [''],
     password: [''],
@@ -22,11 +21,10 @@ export class SignInComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private apiService: ApiService,
-    private router: Router
+    private router: Router,
   ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSubmit() {
     this.apiService
@@ -34,5 +32,4 @@ export class SignInComponent implements OnInit {
       .toPromise()
       .then(() => this.router.navigate(['/auth/login']));
   }
-
 }

@@ -1,4 +1,4 @@
-@import "../../../styles/_variables";
+@import '../../../styles/_variables';
 .card {
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,7 @@
 
   cursor: pointer;
 
-  transition: .5s;
+  transition: 0.5s;
 
   h1 {
     font-size: $titleSmall;

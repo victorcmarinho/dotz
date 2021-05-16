@@ -7,7 +7,7 @@ import {
   RenderComponentOptions,
   render,
   screen,
-  fireEvent
+  fireEvent,
 } from '@testing-library/angular';
 import { NgxMaskModule } from 'ngx-mask';
 import { of } from 'rxjs';
@@ -78,29 +78,28 @@ describe('HomeComponent', () => {
   });
 
   it('should be select card', async () => {
-    component.products$.subscribe(console.log)
-    fixture.detectChanges()
+    component.products$.subscribe(console.log);
+    fixture.detectChanges();
 
-    await fixture.whenStable()
+    await fixture.whenStable();
 
-    const card = screen.getAllByTestId('card')[0]
-    const card2 = screen.getAllByTestId('card')[1]
+    const card = screen.getAllByTestId('card')[0];
+    const card2 = screen.getAllByTestId('card')[1];
 
-    fireEvent.click(card)
-    
-    expect(component.selectedProducts.length).toEqual(1)
+    fireEvent.click(card);
 
-    fireEvent.click(card)
+    expect(component.selectedProducts.length).toEqual(1);
 
-    expect(component.selectedProducts.length).toEqual(0)
+    fireEvent.click(card);
 
-    fireEvent.click(card)
+    expect(component.selectedProducts.length).toEqual(0);
 
-    expect(component.selectedProducts.length).toEqual(1)
+    fireEvent.click(card);
 
-    fireEvent.click(card2)
+    expect(component.selectedProducts.length).toEqual(1);
 
-    expect(component.selectedProducts.length).toEqual(1)
+    fireEvent.click(card2);
 
+    expect(component.selectedProducts.length).toEqual(1);
   });
 });

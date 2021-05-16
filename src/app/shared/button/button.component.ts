@@ -5,13 +5,10 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './button.component.html',
 })
 export class ButtonComponent implements OnInit {
-
-  @Input() type: 'primary' | 'secondary' | 'flat' = 'primary'
+  @Input() type: 'primary' | 'secondary' | 'flat' = 'primary';
   @Input() buttonType = '';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

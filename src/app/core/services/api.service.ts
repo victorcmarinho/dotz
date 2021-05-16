@@ -6,19 +6,18 @@ import { ProductsDTO } from '../models/products';
 import { UserDTO } from '../models/user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
+  private basePath = environment.api;
 
-  private basePath = environment.api
-
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   postUser(data: UserDTO): Observable<UserDTO> {
-    return this.http.post<UserDTO>(`${this.basePath}/user`, data)
+    return this.http.post<UserDTO>(`${this.basePath}/user`, data);
   }
 
-  getProducts():Observable<ProductsDTO[]> {
-    return this.http.get<ProductsDTO[]>(`${this.basePath}/products`)
+  getProducts(): Observable<ProductsDTO[]> {
+    return this.http.get<ProductsDTO[]>(`${this.basePath}/products`);
   }
 }

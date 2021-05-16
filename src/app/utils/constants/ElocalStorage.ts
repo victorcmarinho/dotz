@@ -1,3 +1,3 @@
 export enum ELOCAL_STORAGE {
-    products = "dotz_products"
+  products = 'dotz_products',
 }

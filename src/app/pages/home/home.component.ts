@@ -5,21 +5,19 @@ import { ProductsDTO } from 'src/app/core/models/products';
 import { ApiService } from 'src/app/core/services/api.service';
 import { ELOCAL_STORAGE } from 'src/app/utils/constants/ElocalStorage';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
   options: AnimationOptions = {
     path: '../../../assets/loading.json',
   };
 
   products$!: Observable<ProductsDTO[]>;
 
-  pts = 1000
+  pts = 1000;
 
   selectedProducts: ProductsDTO[] = [];
 
@@ -39,20 +37,21 @@ export class HomeComponent implements OnInit {
 
     if (hasIndex > -1) {
       this.selectedProducts = this.selectedProducts.filter(
-        (target) => target != product
+        target => target != product,
       );
-      this.pts += +product.price
-    }
-    else {
-      let pts = this.pts
-      pts -= +product.price
-      if(pts >= 0) {
+      this.pts += +product.price;
+    } else {
+      let pts = this.pts;
+      pts -= +product.price;
+      if (pts >= 0) {
         this.selectedProducts.push(product);
-        this.pts = pts
+        this.pts = pts;
       }
     }
 
-    localStorage.setItem(ELOCAL_STORAGE.products, JSON.stringify(this.selectedProducts))
+    localStorage.setItem(
+      ELOCAL_STORAGE.products,
+      JSON.stringify(this.selectedProducts),
+    );
   }
-
 }

@@ -2,7 +2,7 @@
   <div>
     <header class="home__header">
       <h1>Dotz</h1>
-      <h3>Pts {{pts}}</h3>
+      <h3>Pts {{ pts }}</h3>
     </header>
 
     <nav class="home__nav">
@@ -13,10 +13,18 @@
     </nav>
   </div>
 
-  <div class="home__products" *ngIf="products$ | async as products; else loading">
-    
+  <div
+    class="home__products"
+    *ngIf="products$ | async as products; else loading"
+  >
     <ng-container *ngFor="let product of products$ | async">
-      <app-card [image]='product.image' [name]="product.name" [price]="product.price" [isSelect]="isSelected(product)" (click)="onClick(product)"></app-card>
+      <app-card
+        [image]="product.image"
+        [name]="product.name"
+        [price]="product.price"
+        [isSelect]="isSelected(product)"
+        (click)="onClick(product)"
+      ></app-card>
     </ng-container>
   </div>
   <ng-template #loading>

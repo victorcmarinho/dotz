@@ -1,24 +1,59 @@
 <section class="signin">
-    <div>
-        <div class="signin__presentation">
-            <h1>Dotz</h1>
-            <p>Controle seus pontos de forma muito simples</p>
-        </div>
-    
-      <form class="signin__form" [formGroup]="signinForm">
-          <input class="input" type="email" placeholder="Email"  formControlName="email"/>
-          <input class="input" type="password" placeholder="Senha" formControlName="password"/>
-          <input class="input" type="text" placeholder="Cidade" formControlName="city"/>
-          <input class="input" type="state" placeholder="Estado" formControlName="state"/>
-          <input class="input" type="address" placeholder="Rua" formControlName="address"/>
-          <input class="input" type="zipcode" placeholder="Código Postal" mask="99999-999" formControlName="zipcode"/>
-          <div class="signin__form__buttons">
-              <app-button buttonType="submit" (click)="onSubmit()"> Cadastrar </app-button>
-              <div>
-                  <span>Ja é cadastrado?</span>
-                  <app-button routerLink="/auth/login" type="flat" buttonType="button"> Fazer login </app-button>
-              </div>
-          </div>
-      </form>
+  <div>
+    <div class="signin__presentation">
+      <h1>Dotz</h1>
+      <p>Controle seus pontos de forma muito simples</p>
     </div>
+
+    <form class="signin__form" [formGroup]="signinForm">
+      <input
+        class="input"
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+      />
+      <input
+        class="input"
+        type="password"
+        placeholder="Senha"
+        formControlName="password"
+      />
+      <input
+        class="input"
+        type="text"
+        placeholder="Cidade"
+        formControlName="city"
+      />
+      <input
+        class="input"
+        type="state"
+        placeholder="Estado"
+        formControlName="state"
+      />
+      <input
+        class="input"
+        type="address"
+        placeholder="Rua"
+        formControlName="address"
+      />
+      <input
+        class="input"
+        type="zipcode"
+        placeholder="Código Postal"
+        mask="99999-999"
+        formControlName="zipcode"
+      />
+      <div class="signin__form__buttons">
+        <app-button buttonType="submit" (click)="onSubmit()">
+          Cadastrar
+        </app-button>
+        <div>
+          <span>Ja é cadastrado?</span>
+          <app-button routerLink="/auth/login" type="flat" buttonType="button">
+            Fazer login
+          </app-button>
+        </div>
+      </div>
+    </form>
+  </div>
 </section>

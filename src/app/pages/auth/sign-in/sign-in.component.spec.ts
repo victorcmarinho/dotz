@@ -64,16 +64,16 @@ describe('SignInComponent', () => {
     expect(
       screen.getByRole('heading', {
         name: /dotz/i,
-      })
+      }),
     ).toBeTruthy();
     expect(
-      screen.getByText(/controle seus pontos de forma muito simples/i)
+      screen.getByText(/controle seus pontos de forma muito simples/i),
     ).toBeTruthy();
 
     expect(
       screen.getByRole('button', {
         name: /cadastrar/i,
-      })
+      }),
     ).toBeTruthy();
   });
 

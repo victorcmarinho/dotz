@@ -1,62 +1,59 @@
 @import './../../../../styles/_variables';
 .login {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    height: 100vh;
+  height: 100vh;
 
-    > div {
-        max-width: 800px;
+  > div {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  &__presentation {
+    color: $orange;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    h1 {
+      margin-top: calc(auto - 40%);
+      font-size: $titleSmall;
+    }
+
+    p {
+      font-size: $title;
+      color: $blue;
+    }
+  }
+
+  &__form {
+    input + input {
+      margin-top: 25px;
+    }
+
+    &__buttons {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+      }
+
+      span {
+        font-size: $textMedium;
+        color: $grayText;
         margin: auto;
+      }
+
+      app-button {
+        width: 100%;
+        button {
+          width: 100%;
+        }
+      }
     }
-
-    &__presentation {
-        color: $orange;
-        margin-top: 40px;
-        margin-bottom: 30px;
-        h1 {
-            
-            margin-top: calc(auto - 40%);
-            font-size: $titleSmall;
-        }
-    
-        p {
-            font-size: $title;
-            color: $blue;
-        }
-    }
-
-    &__form {
-        input + input {
-            margin-top: 25px;
-        }
-        
-        &__buttons {
-            margin-top: 20px;
-            display: grid;
-            grid-template-columns: 1fr;
-            row-gap: 20px;
-
-            > div {
-                display: flex;
-                flex-direction: column;
-                place-content: center;
-            }
-
-            span {
-                font-size: $textMedium;
-                color: $grayText;
-                margin: auto;
-            }
-
-            app-button {
-                width: 100%;
-                button {
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-
+  }
 }

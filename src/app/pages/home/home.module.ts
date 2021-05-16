@@ -7,17 +7,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { LottieModule } from 'ngx-lottie';
 import { ProductsComponent } from './products/products.component';
 
-
 @NgModule({
-  declarations: [
-    HomeComponent,
-    ProductsComponent
-  ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    SharedModule,
-    LottieModule,
-  ]
+  declarations: [HomeComponent, ProductsComponent],
+  imports: [CommonModule, HomeRoutingModule, SharedModule, LottieModule],
 })
-export class HomeModule { }
+export class HomeModule {}

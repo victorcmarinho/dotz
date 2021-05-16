@@ -4,25 +4,32 @@
 @import './styles/_inputs';
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    box-sizing: border-box;
-    &::before,
-    &::after {
-        box-sizing: inherit;
-    }
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
 }
-body, input, button {
-    font-family: 'Roboto', sans-serif;
-    font-size: $textMedium;
+body,
+input,
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: $textMedium;
 }
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
-h1, h2, h3, h4, h5, h6, strong {
-    font-weight: 500;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 500;
 }
-

@@ -8,18 +8,14 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 
-
 @NgModule({
-  declarations: [
-    LoginInComponent,
-    SignInComponent
-  ],
+  declarations: [LoginInComponent, SignInComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
     SharedModule,
     ReactiveFormsModule,
     NgxMaskModule.forChild(),
-  ]
+  ],
 })
-export class AuthModule { }
+export class AuthModule {}
