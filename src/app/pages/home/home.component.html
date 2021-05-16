@@ -1,0 +1,21 @@
+<section class="home">
+  <div>
+    <header class="home__header">
+      <h1>Dotz</h1>
+      <h3>Pts {{pts}}</h3>
+    </header>
+
+    <nav class="home__nav">
+      <ul>
+        <li routerLink="/home" routerLinkActive="active">Home</li>
+        <li routerLink="/products" routerLinkActive="active">Meus pedidos</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="home__products">
+    <ng-container *ngFor="let product of products$ | async;">
+      <app-card [image]='product.image' [name]="product.name" [price]="product.price" [isSelect]="isSelected(product)" (click)="onClick(product)"></app-card>
+    </ng-container>
+  </div>
+</section>

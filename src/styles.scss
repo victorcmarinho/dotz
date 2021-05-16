@@ -4,7 +4,6 @@
 @import './styles/_inputs';
 
 * {
-    font-size: 62.5%;
     margin: 0;
     padding: 0;
     outline: none;
@@ -18,7 +17,7 @@
 }
 body, input, button {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.6rem;
+    font-size: $textMedium;
 }
 button {
     cursor: pointer;

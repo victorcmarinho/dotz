@@ -18,7 +18,7 @@ export class ApiService {
     return this.http.post<UserDTO>(`${this.basePath}/user`, data)
   }
 
-  getProducts():Observable<ProductsDTO> {
-    return this.http.get<ProductsDTO>(`${this.basePath}/products`)
+  getProducts():Observable<ProductsDTO[]> {
+    return this.http.get<ProductsDTO[]>(`${this.basePath}/products`)
   }
 }

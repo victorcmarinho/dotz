@@ -14,6 +14,10 @@
   background-size: cover;
   background-position: center;
 
+  cursor: pointer;
+
+  transition: .5s;
+
   h1 {
     font-size: $titleSmall;
     color: white;

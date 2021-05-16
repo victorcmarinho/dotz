@@ -7,8 +7,8 @@ $grayText: #8E8E8E;
 $grayBorder: #DDDDDD;
 $grayInput: rgba(178, 178, 178, 0.0409473);
 
-$title: 3.0rem;
-$titleSmall: 2.4rem;
-$textLarge: 1.8rem;
-$textMedium: 1.6rem;
-$textSmall: 1.4rem;
+$title: prem(30);
+$titleSmall: prem(24);
+$textLarge: prem(18);
+$textMedium: prem(16);
+$textSmall: prem(14);

@@ -1,0 +1,70 @@
+@import '../../../styles/_variables';
+.home {
+
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+    >div {
+        width: 100%;
+    }
+
+    &__header {
+        padding: 8px;
+        display: flex;
+        place-content: space-between;
+
+        width: 100%;
+
+        font-size: $titleSmall;
+        h1 {
+            color: $orange;
+        }
+
+        h3 {
+            color: $grayText;
+        }
+    }
+
+    &__nav {
+        font-size: $textLarge;
+        color: $grayText;
+
+        ul {
+            margin-top: 8px;
+            display: flex;
+            flex-direction: row;
+            place-content: center;
+
+            li + li {
+                margin-left: 18px;
+            }
+
+            li {
+                display: flex;
+                white-space: nowrap;
+                line-height: 21px;
+                width: min-content;
+                cursor: pointer;
+
+                &.active {
+                    color: $orange;
+                    border-bottom: 2px solid;
+                }
+            }
+        }
+
+    }
+
+    &__products {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 356px));
+        gap: 5px;
+        place-content: center;
+    }
+}
