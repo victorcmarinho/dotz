@@ -16,10 +16,10 @@ Foi utilizado nesse projeto também:
 - Fakerjs para mocks
 - apimock.io
 
-[preview](https://raw.githubusercontent.com/victorcmarinho/dotz/main/images/preview4.png)
-[storybook](https://raw.githubusercontent.com/victorcmarinho/dotz/main/images/preview3.png)
-[karma](https://raw.githubusercontent.com/victorcmarinho/dotz/main/images/preview2.png)
-[unit test](https://raw.githubusercontent.com/victorcmarinho/dotz/main/images/preview.png)
+![preview](https://raw.githubusercontent.com/victorcmarinho/dotz/main/images/preview4.png)
+![storybook](https://raw.githubusercontent.com/victorcmarinho/dotz/main/images/preview3.png)
+![karma](https://raw.githubusercontent.com/victorcmarinho/dotz/main/images/preview2.png)
+![unit test](https://raw.githubusercontent.com/victorcmarinho/dotz/main/images/preview.png)
 
 
 
