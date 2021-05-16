@@ -1,0 +1,12 @@
+@import './_variables';
+.input {
+    font-size: $textMedium;
+    border-radius: 15px;
+    background-color: $grayInput;
+    border: 1px solid $grayBorder;
+    color: $grayText;
+    padding: 18px 16px;
+
+    height: 25px;
+    width: 100%;
+}

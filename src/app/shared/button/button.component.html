@@ -1,0 +1,8 @@
+<button
+  class="btn"
+  [class.btn--secondary]="type === 'secondary'"
+  [class.btn--flat]="type === 'flat'"
+  [type]="buttonType"
+>
+  <ng-content></ng-content>
+</button>

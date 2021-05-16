@@ -1,0 +1,10 @@
+<section
+  class="card"
+  [class.card--opacity]="isSelect"
+  [ngStyle]="{
+    'background-image': 'url(' + image + ')'
+  }"
+>
+  <h1>{{ name }}</h1>
+  <p>{{ price }} pts</p>
+</section>

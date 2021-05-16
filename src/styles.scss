@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styles/_variables';
+@import './styles/_buttons';
+@import './styles/_inputs';
 
 * {
     font-size: 62.5%;
@@ -24,12 +27,3 @@ h1, h2, h3, h4, h5, h6, strong {
     font-weight: 500;
 }
 
-$orange: #f29433;
-$orangeDark: #FF872C;
-$blue: #172860;
-$black: #363F5F;
-
-$title: 30px;
-$textLarge: 1.8px;
-$textMedium: 1.6px;
-$textSmall: 1.4px;
