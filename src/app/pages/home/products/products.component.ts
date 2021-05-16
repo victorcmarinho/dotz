@@ -10,7 +10,7 @@ import { ELOCAL_STORAGE } from 'src/app/utils/constants/ElocalStorage';
 export class ProductsComponent {
   get products(): ProductsDTO[] {
     return JSON.parse(
-      localStorage.getItem(ELOCAL_STORAGE.products) || ''
+      localStorage.getItem(ELOCAL_STORAGE.products)!
     ) as ProductsDTO[];
   }
 }

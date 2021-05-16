@@ -19,7 +19,7 @@ export class LoginInComponent implements OnInit {
     private fb: FormBuilder,
     private apiService: ApiService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {}
 
