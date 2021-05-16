@@ -9,5 +9,4 @@ export class ButtonComponent {
   @Input() buttonType = '';
 
   constructor() {}
-
 }

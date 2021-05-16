@@ -20,7 +20,6 @@ import { CardComponent } from 'src/app/shared/card/card.component';
 
 import { HomeComponent } from './home.component';
 
-
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let componentEl: RenderResult<HomeComponent, HomeComponent>;

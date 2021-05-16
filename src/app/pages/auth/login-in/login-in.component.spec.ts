@@ -29,7 +29,7 @@ describe('LoginInComponent', () => {
     getProducts: () => of(true),
   };
 
-  let mockRouter = {
+  const mockRouter = {
     navigate: jasmine.createSpy('navigate'),
   };
 
