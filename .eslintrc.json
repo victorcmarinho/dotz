@@ -10,9 +10,7 @@
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates",
-        "plugin:prettier/recommended",
-        "prettier"
+        "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "plugins": ["import-helpers", "security", "prettier"],
       "rules": {

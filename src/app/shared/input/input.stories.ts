@@ -1,4 +1,6 @@
+/* eslint-disable @angular-eslint/component-class-suffix */
 import { Component } from '@angular/core';
+
 import { Story, Meta } from '@storybook/angular/types-6-0';
 
 @Component({

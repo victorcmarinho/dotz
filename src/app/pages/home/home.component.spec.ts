@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
+
 import {
   RenderResult,
   RenderComponentOptions,
@@ -9,16 +10,16 @@ import {
   screen,
   fireEvent,
 } from '@testing-library/angular';
+import * as faker from 'faker';
 import { NgxMaskModule } from 'ngx-mask';
 import { of } from 'rxjs';
 import { ProductsDTO } from 'src/app/core/models/products';
 import { ApiService } from 'src/app/core/services/api.service';
 import { ButtonComponent } from 'src/app/shared/button/button.component';
+import { CardComponent } from 'src/app/shared/card/card.component';
 
 import { HomeComponent } from './home.component';
 
-import * as faker from 'faker';
-import { CardComponent } from 'src/app/shared/card/card.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;

@@ -1,7 +1,9 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
+
 import {
   RenderResult,
   RenderComponentOptions,
@@ -9,14 +11,13 @@ import {
   screen,
   fireEvent,
 } from '@testing-library/angular';
+import userEvent from '@testing-library/user-event';
 import { NgxMaskModule } from 'ngx-mask';
 import { of } from 'rxjs';
 import { ApiService } from 'src/app/core/services/api.service';
 import { ButtonComponent } from 'src/app/shared/button/button.component';
 
 import { SignInComponent } from './sign-in.component';
-import userEvent from '@testing-library/user-event';
-import { Router } from '@angular/router';
 
 describe('SignInComponent', () => {
   let component: SignInComponent;

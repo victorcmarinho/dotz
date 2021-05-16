@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+
+import { LottieModule } from 'ngx-lottie';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { SharedModule } from 'src/app/shared/shared.module';
-import { LottieModule } from 'ngx-lottie';
 import { ProductsComponent } from './products/products.component';
 
 @NgModule({

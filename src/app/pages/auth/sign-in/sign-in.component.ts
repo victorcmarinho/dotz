@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from 'src/app/core/services/api.service';
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss'],
 })
-export class SignInComponent implements OnInit {
+export class SignInComponent {
   signinForm = this.fb.group({
     email: [''],
     password: [''],
@@ -23,8 +24,6 @@ export class SignInComponent implements OnInit {
     private apiService: ApiService,
     private router: Router,
   ) {}
-
-  ngOnInit(): void {}
 
   onSubmit() {
     this.apiService

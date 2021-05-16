@@ -2,6 +2,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { ApiService } from 'src/app/core/services/api.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ApiService } from 'src/app/core/services/api.service';
   templateUrl: './login-in.component.html',
   styleUrls: ['./login-in.component.scss'],
 })
-export class LoginInComponent implements OnInit {
+export class LoginInComponent {
   loginForm = this.fb.group({
     email: [''],
     password: [''],
@@ -20,8 +21,6 @@ export class LoginInComponent implements OnInit {
     private apiService: ApiService,
     private router: Router,
   ) {}
-
-  ngOnInit(): void {}
 
   onSubmit() {
     this.apiService
