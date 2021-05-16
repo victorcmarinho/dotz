@@ -1,0 +1,24 @@
+<section class="products">
+  <div>
+    <header class="products__header">
+      <h1>Dotz</h1>
+    </header>
+
+    <nav class="products__nav">
+      <ul>
+        <li routerLink="/home" routerLinkActive="active">Home</li>
+        <li routerLink="/products" routerLinkActive="active">Meus pedidos</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="products__products">
+    <ng-container *ngFor="let product of products">
+      <app-card
+        [image]="product.image"
+        [name]="product.name"
+        [price]="product.price"
+      ></app-card>
+    </ng-container>
+  </div>
+</section>
