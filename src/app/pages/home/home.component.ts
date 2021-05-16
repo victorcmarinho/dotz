@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
 import { Observable } from 'rxjs';
 import { ProductsDTO } from 'src/app/core/models/products';
 import { ApiService } from 'src/app/core/services/api.service';
 import { ELOCAL_STORAGE } from 'src/app/utils/constants/ElocalStorage';
+
 
 @Component({
   selector: 'app-home',
@@ -10,6 +12,11 @@ import { ELOCAL_STORAGE } from 'src/app/utils/constants/ElocalStorage';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+
+  options: AnimationOptions = {
+    path: '../../../assets/loading.json',
+  };
+
   products$!: Observable<ProductsDTO[]>;
 
   pts = 1000

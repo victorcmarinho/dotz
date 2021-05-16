@@ -22,6 +22,8 @@
     "@angular/platform-browser": "~11.2.14",
     "@angular/platform-browser-dynamic": "~11.2.14",
     "@angular/router": "~11.2.14",
+    "lottie-web": "^5.7.8",
+    "ngx-lottie": "^6.4.0",
     "ngx-mask": "^11.1.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
